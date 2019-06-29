@@ -14,6 +14,20 @@ class Api::V1::UsersController < ApplicationController
         render json: @users
     end
 
+    def update
+        if !@user.save!(user_params) 
+            render json: @user.errors, status: :unprocessable_entity
+        end
+    end
+
+    def show
+        render json: @user
+    end
+
+    def destroy
+        @user.delete
+    end
+
     private
 
     def user_params
