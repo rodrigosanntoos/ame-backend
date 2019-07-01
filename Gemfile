@@ -4,13 +4,13 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.4.2'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.2.3'
+gem 'rails', '~> 5.2.1'
 # Use postgresql as the database for Active Record
 gem 'pg', '>= 0.18', '< 2.0'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-# gem 'jbuilder', '~> 2.5'
+gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
@@ -24,13 +24,36 @@ gem 'puma', '~> 3.11'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
-gem 'rack-cors', require: 'rack/cors'
-gem 'devise_token_auth'
-gem 'devise'
-gem 'omniauth'
+gem 'pundit'
 
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 # gem 'rack-cors'
+
+gem 'kaminari'
+gem "paranoia"
+gem "faker"
+gem "carrierwave"
+gem "mini_magick"
+gem "houston"
+gem "fcm"
+gem 'devise_token_auth'
+gem 'devise'
+gem 'omniauth'
+gem 'rack-cors', require: 'rack/cors'
+gem 'filterable'
+gem 'delayed_job_active_record'
+gem 'daemons'
+gem "koala"
+gem 'rest-client'
+gem 'httparty'
+gem 'colorize'
+gem "roo", "~> 2.7.0"
+gem 'roo-xls'
+gem 'delayed_job_active_record'
+gem 'capistrano', '~> 3.7', '>= 3.7.1'
+gem 'capistrano-rails', '~> 1.2'
+gem 'capistrano-passenger', '~> 0.2.0'
+gem 'capistrano-rvm'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

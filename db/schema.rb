@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_28_122906) do
+ActiveRecord::Schema.define(version: 2019_07_01_224339) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -43,31 +43,59 @@ ActiveRecord::Schema.define(version: 2019_06_28_122906) do
   create_table "products", force: :cascade do |t|
     t.string "name"
     t.integer "amount"
-    t.float "value_product"
-    t.float "value_unit"
+    t.float "value"
     t.float "value_smash"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "users", force: :cascade do |t|
-    t.string "name"
-    t.string "email"
+  create_table "sale_products", force: :cascade do |t|
+    t.bigint "product_id"
+    t.bigint "sale_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["product_id"], name: "index_sale_products_on_product_id"
+    t.index ["sale_id"], name: "index_sale_products_on_sale_id"
+  end
+
+  create_table "sales", force: :cascade do |t|
+    t.bigint "user_id"
     t.string "address"
     t.integer "number"
-    t.string "apt"
-    t.string "neighborhood"
+    t.integer "apt"
+    t.string "complement"
+    t.string "reference"
+    t.string "phone"
+    t.string "cell_phone"
+    t.string "birthday_name"
+    t.integer "year"
+    t.integer "number_children"
+    t.string "age_range"
+    t.integer "amount_adult"
+    t.string "hour"
+    t.date "date_event"
+    t.string "day_week"
+    t.date "date_final"
+    t.float "freight"
+    t.integer "days_collect"
+    t.float "value_final"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_sales_on_user_id"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "name"
+    t.string "address"
+    t.integer "number"
     t.string "telephone"
     t.string "cell_phone"
-    t.string "name_birthday"
-    t.integer "number_childrem"
-    t.integer "number_adult"
-    t.time "hour_start"
-    t.time "hour_end"
-    t.date "date"
-    t.string "day_week"
+    t.string "complement"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "sale_products", "products"
+  add_foreign_key "sale_products", "sales"
+  add_foreign_key "sales", "users"
 end

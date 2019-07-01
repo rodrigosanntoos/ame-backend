@@ -3,8 +3,7 @@ class CreateProducts < ActiveRecord::Migration[5.2]
     create_table :products do |t|
       t.string :name
       t.integer :amount
-      t.float :value_product
-      t.float :value_unit
+      t.float :value
       t.float :value_smash
 
       t.timestamps

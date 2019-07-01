@@ -996,3 +996,924 @@ Migrating to Details (213242153151)
 Migrating to Details (213242153151)
   [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(3550744802028369960)[0m
   ↳ bin/rails:9
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (124.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "festa-backend_development"[0m
+  ↳ bin/rails:9
+  [1m[35m (119.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "festa-backend_test"[0m
+  ↳ bin/rails:9
+  [1m[35m (486.2ms)[0m  [1m[35mCREATE DATABASE "festa-backend_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (374.4ms)[0m  [1m[35mCREATE DATABASE "festa-backend_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (6.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (3.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3550744802028369960)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateUsers (20190608154248)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (5.0ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "name" character varying, "address" character varying, "number" integer, "telephone" character varying, "cell_phone" character varying, "complement" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190608154248_create_users.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190608154248"]]
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateProducts (20190620160731)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE TABLE "products" ("id" bigserial primary key, "name" character varying, "amount" integer, "value" float, "value_smash" float, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190620160731_create_products.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190620160731"]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to DeviseTokenAuthCreateAdmins (20190628122906)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (4.5ms)[0m  [1m[35mCREATE TABLE "admins" ("id" bigserial primary key, "provider" character varying DEFAULT 'email' NOT NULL, "uid" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "allow_password_change" boolean DEFAULT FALSE, "remember_created_at" timestamp, "confirmation_token" character varying, "confirmed_at" timestamp, "confirmation_sent_at" timestamp, "unconfirmed_email" character varying, "name" character varying, "nickname" character varying, "image" character varying, "email" character varying, "tokens" json, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190628122906_devise_token_auth_create_admins.rb:4
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_admins_on_email" ON "admins"  ("email")[0m
+  ↳ db/migrate/20190628122906_devise_token_auth_create_admins.rb:43
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_admins_on_uid_and_provider" ON "admins"  ("uid", "provider")[0m
+  ↳ db/migrate/20190628122906_devise_token_auth_create_admins.rb:44
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_admins_on_reset_password_token" ON "admins"  ("reset_password_token")[0m
+  ↳ db/migrate/20190628122906_devise_token_auth_create_admins.rb:45
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_admins_on_confirmation_token" ON "admins"  ("confirmation_token")[0m
+  ↳ db/migrate/20190628122906_devise_token_auth_create_admins.rb:46
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190628122906"]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-07-01 18:26:39.692877"], ["updated_at", "2019-07-01 18:26:39.692877"]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(3550744802028369960)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/api/v1/products" for ::1 at 2019-07-01 18:07:04 -0300
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/mateus/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Api::V1::ProductsController#index as JSON
+  Parameters: {"product"=>{}}
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/api/v1/products_controller.rb:16
+Completed 200 OK in 2ms (Views: 0.9ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/api/v1/users" for ::1 at 2019-07-01 18:07:15 -0300
+Processing by Api::V1::UsersController#index as JSON
+  Parameters: {"title"=>"Noticia dsadsadsadsadsa", "subtitle"=>"Essa é a primeira noticia", "source"=>"22/10/2018", "body"=>"10/10/2017", "interest_publication_attributes"=>{"name"=>"competitividade,sustentabilidade"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /home/mateus/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /home/mateus/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+NoMethodError (undefined method `page' for #<ActiveRecord::Relation []>):
+  
+app/controllers/api/v1/users_controller.rb:12:in `index'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /home/mateus/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Started GET "/api/v1/users" for ::1 at 2019-07-01 18:08:36 -0300
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/mateus/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Api::V1::UsersController#index as JSON
+  Parameters: {"title"=>"Noticia dsadsadsadsadsa", "subtitle"=>"Essa é a primeira noticia", "source"=>"22/10/2018", "body"=>"10/10/2017", "interest_publication_attributes"=>{"name"=>"competitividade,sustentabilidade"}}
+Completed 204 No Content in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/users" for ::1 at 2019-07-01 18:08:45 -0300
+Processing by Api::V1::UsersController#index as JSON
+  Parameters: {"user"=>{}}
+Completed 204 No Content in 0ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/api/v1/users" for ::1 at 2019-07-01 18:09:43 -0300
+Processing by Api::V1::UsersController#index as JSON
+  Parameters: {"user"=>{}}
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/api/v1/users" for ::1 at 2019-07-01 18:12:12 -0300
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"name"=>"Mateus Fulgencio", "address"=>"Rua pouso alegre", "number"=>"2486", "telephone"=>"31515351", "cell_phone"=>"123454122", "complement"=>"bloco M apt 201", "user"=>{"name"=>"Mateus Fulgencio", "address"=>"Rua pouso alegre", "number"=>"2486", "telephone"=>"31515351", "cell_phone"=>"123454122", "complement"=>"bloco M apt 201"}}
+Unpermitted parameters: :format, :user
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/users_controller.rb:5
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("name", "address", "number", "telephone", "cell_phone", "complement", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Mateus Fulgencio"], ["address", "Rua pouso alegre"], ["number", 2486], ["telephone", "31515351"], ["cell_phone", "123454122"], ["complement", "bloco M apt 201"], ["created_at", "2019-07-01 21:12:12.280838"], ["updated_at", "2019-07-01 21:12:12.280838"]]
+  ↳ app/controllers/api/v1/users_controller.rb:5
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/users_controller.rb:5
+Completed 204 No Content in 16ms (ActiveRecord: 3.9ms)
+
+
+Started GET "/api/v1/products" for ::1 at 2019-07-01 18:13:07 -0300
+Processing by Api::V1::ProductsController#index as JSON
+  Parameters: {"product"=>{}}
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/api/v1/products_controller.rb:16
+Completed 200 OK in 2ms (Views: 0.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/api/v1/products" for ::1 at 2019-07-01 18:13:52 -0300
+Processing by Api::V1::ProductsController#index as JSON
+  Parameters: {"product"=>{}}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/api/v1/products_controller.rb:16
+Completed 200 OK in 2ms (Views: 0.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/products" for ::1 at 2019-07-01 18:14:27 -0300
+Processing by Api::V1::ProductsController#index as JSON
+  Parameters: {"product"=>{}}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/api/v1/products_controller.rb:16
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/users" for ::1 at 2019-07-01 18:14:33 -0300
+Processing by Api::V1::UsersController#index as JSON
+  Parameters: {"user"=>{}}
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/users" for ::1 at 2019-07-01 18:15:28 -0300
+Processing by Api::V1::UsersController#index as JSON
+  Parameters: {"user"=>{}}
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/users" for ::1 at 2019-07-01 18:15:54 -0300
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/mateus/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Api::V1::UsersController#index as JSON
+  Parameters: {"user"=>{}}
+Completed 204 No Content in 1ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/api/v1/users" for ::1 at 2019-07-01 18:16:51 -0300
+  
+ActionController::RoutingError (uninitialized constant Api::V1::BaseController::Pundit):
+  
+app/controllers/api/v1/base_controller.rb:4:in `<class:BaseController>'
+app/controllers/api/v1/base_controller.rb:1:in `<main>'
+app/controllers/api/v1/users_controller.rb:1:in `<main>'
+Started GET "/api/v1/users" for ::1 at 2019-07-01 18:17:44 -0300
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/mateus/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Api::V1::UsersController#index as JSON
+  Parameters: {"user"=>{}}
+Completed 204 No Content in 1ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/api/v1/users" for ::1 at 2019-07-01 18:17:46 -0300
+Processing by Api::V1::UsersController#index as JSON
+  Parameters: {"user"=>{}}
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/users" for ::1 at 2019-07-01 18:17:46 -0300
+Processing by Api::V1::UsersController#index as JSON
+  Parameters: {"user"=>{}}
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/users" for ::1 at 2019-07-01 18:17:47 -0300
+Processing by Api::V1::UsersController#index as JSON
+  Parameters: {"user"=>{}}
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/routes" for ::1 at 2019-07-01 18:18:22 -0300
+Processing by Rails::InfoController#routes as HTML
+  Rendering /home/mateus/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/railties-5.2.3/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /home/mateus/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/templates/routes/_route.html.erb [21 times] (7.9ms)
+  Rendered /home/mateus/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/templates/routes/_table.html.erb (7.5ms)
+  Rendered /home/mateus/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/railties-5.2.3/lib/rails/templates/rails/info/routes.html.erb within layouts/application (20.8ms)
+Completed 200 OK in 33ms (Views: 30.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/routes?path=users" for ::1 at 2019-07-01 18:18:41 -0300
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"users"}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/users" for ::1 at 2019-07-01 18:20:24 -0300
+Processing by Api::V1::UsersController#index as JSON
+  Parameters: {"user"=>{}}
+Completed 204 No Content in 89616ms (ActiveRecord: 1.6ms)
+
+
+Started POST "/api/v1/auth/sign_in" for ::1 at 2019-07-01 18:22:17 -0300
+  
+ActionController::RoutingError (uninitialized constant DeviseTokenAuth::Concerns::SetAdminByToken):
+  
+app/controllers/application_controller.rb:2:in `<class:ApplicationController>'
+app/controllers/application_controller.rb:1:in `<main>'
+app/controllers/api/v1/overrides/sessions_controller.rb:2:in `<module:V1>'
+app/controllers/api/v1/overrides/sessions_controller.rb:1:in `<main>'
+Started GET "/api/v1/users" for ::1 at 2019-07-01 18:23:05 -0300
+Processing by Api::V1::UsersController#index as JSON
+  Parameters: {"user"=>{}}
+No template found for Api::V1::UsersController#index, rendering head :no_content
+Completed 204 No Content in 3476ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/api/v1/users" for ::1 at 2019-07-01 18:24:15 -0300
+Processing by Api::V1::UsersController#index as JSON
+  Parameters: {"user"=>{}}
+No template found for Api::V1::UsersController#index, rendering head :no_content
+Completed 204 No Content in 64ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/api/v1/users" for ::1 at 2019-07-01 18:24:36 -0300
+Processing by Api::V1::UsersController#index as JSON
+  Parameters: {"user"=>{}}
+No template found for Api::V1::UsersController#index, rendering head :no_content
+Completed 204 No Content in 62ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/users" for ::1 at 2019-07-01 18:25:54 -0300
+Processing by Api::V1::UsersController#index as JSON
+  Parameters: {"user"=>{}}
+No template found for Api::V1::UsersController#index, rendering head :no_content
+Completed 204 No Content in 69ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/users" for ::1 at 2019-07-01 18:25:56 -0300
+Processing by Api::V1::UsersController#index as JSON
+  Parameters: {"user"=>{}}
+No template found for Api::V1::UsersController#index, rendering head :no_content
+Completed 204 No Content in 64ms (ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3550744802028369960)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(3550744802028369960)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/api/v1/users" for ::1 at 2019-07-01 18:30:55 -0300
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/mateus/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Api::V1::UsersController#index as JSON
+  Parameters: {"user"=>{}}
+No template found for Api::V1::UsersController#index, rendering head :no_content
+Completed 204 No Content in 63ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/api/v1/users" for ::1 at 2019-07-01 18:30:59 -0300
+Processing by Api::V1::UsersController#index as JSON
+  Parameters: {"user"=>{}}
+No template found for Api::V1::UsersController#index, rendering head :no_content
+Completed 204 No Content in 63ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/users" for ::1 at 2019-07-01 18:31:09 -0300
+Processing by Api::V1::UsersController#index as JSON
+  Parameters: {"user"=>{}}
+No template found for Api::V1::UsersController#index, rendering head :no_content
+Completed 204 No Content in 61ms (ActiveRecord: 0.0ms)
+
+
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/api/v1/users" for ::1 at 2019-07-01 18:33:56 -0300
+Processing by Api::V1::UsersController#index as JSON
+  Parameters: {"user"=>{}}
+No template found for Api::V1::UsersController#index, rendering head :no_content
+Completed 204 No Content in 75ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/api/v1/users" for ::1 at 2019-07-01 18:34:34 -0300
+Processing by Api::V1::UsersController#index as JSON
+  Parameters: {"user"=>{}}
+No template found for Api::V1::UsersController#index, rendering head :no_content
+Completed 204 No Content in 65ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/users" for ::1 at 2019-07-01 18:34:36 -0300
+Processing by Api::V1::UsersController#index as JSON
+  Parameters: {"user"=>{}}
+No template found for Api::V1::UsersController#index, rendering head :no_content
+Completed 204 No Content in 74ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/users" for ::1 at 2019-07-01 18:34:50 -0300
+Processing by Api::V1::UsersController#index as JSON
+  Parameters: {"user"=>{}}
+No template found for Api::V1::UsersController#index, rendering head :no_content
+Completed 204 No Content in 86ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/users" for ::1 at 2019-07-01 18:34:57 -0300
+Processing by Api::V1::UsersController#index as JSON
+  Parameters: {"user"=>{}}
+No template found for Api::V1::UsersController#index, rendering head :no_content
+Completed 204 No Content in 63ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/users" for ::1 at 2019-07-01 18:34:59 -0300
+Processing by Api::V1::UsersController#index as JSON
+  Parameters: {"user"=>{}}
+No template found for Api::V1::UsersController#index, rendering head :no_content
+Completed 204 No Content in 73ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/users" for ::1 at 2019-07-01 18:34:59 -0300
+Processing by Api::V1::UsersController#index as JSON
+  Parameters: {"user"=>{}}
+No template found for Api::V1::UsersController#index, rendering head :no_content
+Completed 204 No Content in 89ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/users" for ::1 at 2019-07-01 18:35:00 -0300
+Processing by Api::V1::UsersController#index as JSON
+  Parameters: {"user"=>{}}
+No template found for Api::V1::UsersController#index, rendering head :no_content
+Completed 204 No Content in 69ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/users" for ::1 at 2019-07-01 18:35:00 -0300
+Processing by Api::V1::UsersController#index as JSON
+  Parameters: {"user"=>{}}
+No template found for Api::V1::UsersController#index, rendering head :no_content
+Completed 204 No Content in 75ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/users" for ::1 at 2019-07-01 18:35:01 -0300
+Processing by Api::V1::UsersController#index as JSON
+  Parameters: {"user"=>{}}
+No template found for Api::V1::UsersController#index, rendering head :no_content
+Completed 204 No Content in 75ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/users" for ::1 at 2019-07-01 18:35:01 -0300
+Processing by Api::V1::UsersController#index as JSON
+  Parameters: {"user"=>{}}
+No template found for Api::V1::UsersController#index, rendering head :no_content
+Completed 204 No Content in 74ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/users" for ::1 at 2019-07-01 18:35:01 -0300
+Processing by Api::V1::UsersController#index as JSON
+  Parameters: {"user"=>{}}
+No template found for Api::V1::UsersController#index, rendering head :no_content
+Completed 204 No Content in 67ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/users" for ::1 at 2019-07-01 18:35:44 -0300
+Processing by Api::V1::UsersController#index as JSON
+  Parameters: {"user"=>{}}
+No template found for Api::V1::UsersController#index, rendering head :no_content
+Completed 204 No Content in 68ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/api/v1/users" for ::1 at 2019-07-01 18:38:42 -0300
+Processing by Api::V1::UsersController#index as JSON
+  Parameters: {"user"=>{}}
+No template found for Api::V1::UsersController#index, rendering head :no_content
+Completed 204 No Content in 66ms (ActiveRecord: 3.2ms)
+
+
+Started GET "/api/v1/users" for ::1 at 2019-07-01 18:38:58 -0300
+Processing by Api::V1::UsersController#index as JSON
+No template found for Api::V1::UsersController#index, rendering head :no_content
+Completed 204 No Content in 73ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/users" for ::1 at 2019-07-01 18:39:01 -0300
+Processing by Api::V1::UsersController#index as JSON
+No template found for Api::V1::UsersController#index, rendering head :no_content
+Completed 204 No Content in 68ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/users" for ::1 at 2019-07-01 18:39:03 -0300
+Processing by Api::V1::UsersController#index as JSON
+No template found for Api::V1::UsersController#index, rendering head :no_content
+Completed 204 No Content in 71ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/users" for ::1 at 2019-07-01 18:44:21 -0300
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/mateus/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Api::V1::UsersController#index as JSON
+  Parameters: {"user"=>{}}
+No template found for Api::V1::UsersController#index, rendering head :no_content
+Completed 204 No Content in 42ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/api/v1/users" for ::1 at 2019-07-01 18:44:38 -0300
+Processing by Api::V1::UsersController#index as JSON
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:14
+Completed 200 OK in 15ms (Views: 9.6ms | ActiveRecord: 7.4ms)
+
+
+Started GET "/api/v1/users" for ::1 at 2019-07-01 18:50:05 -0300
+  [1m[35m (3.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/mateus/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Api::V1::UsersController#index as JSON
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:14
+Completed 200 OK in 14ms (Views: 9.2ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/api/v1/users" for ::1 at 2019-07-01 18:50:21 -0300
+Processing by Api::V1::UsersController#index as JSON
+  Parameters: {"user"=>{}}
+  Rendering api/v1/users/index.json.jbuilder
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /home/mateus/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendered api/v1/users/index.json.jbuilder (24.5ms)
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 4.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `total_pages' for #<User::ActiveRecord_Relation:0x000055fb72e4ae80>):
+    1: json.total_page @users.total_pages
+    2: byebug
+    3: json.users @users.each do |user|
+    4:     json.partial! 'user', locals: { user: user } 
+  
+app/views/api/v1/users/index.json.jbuilder:1:in `_app_views_api_v__users_index_json_jbuilder__1008980921836105147_47269226366660'
+Started GET "/api/v1/users" for ::1 at 2019-07-01 18:51:15 -0300
+Processing by Api::V1::UsersController#index as JSON
+  Parameters: {"user"=>{}}
+  Rendering api/v1/users/index.json.jbuilder
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/api/v1/users/index.json.jbuilder:1
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/api/v1/users/index.json.jbuilder:3
+  Rendered api/v1/users/_user.json.jbuilder (0.6ms)
+  Rendered api/v1/users/index.json.jbuilder (2886.1ms)
+Completed 200 OK in 2890ms (Views: 2880.8ms | ActiveRecord: 9.8ms)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2019-07-01 18:57:43 -0300
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"1", "user"=>{}}
+  Rendering api/v1/users/show.json.jbuilder
+  Rendered api/v1/users/_user.json.jbuilder (3.1ms)
+  Rendered api/v1/users/show.json.jbuilder (4.3ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 6.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    1: json.name user.name
+    2: json.address user.address
+    3: json.number user.number
+    4: json.telephone user.telephone
+  
+app/views/api/v1/users/_user.json.jbuilder:1:in `_app_views_api_v__users__user_json_jbuilder___944544933614532275_47269222954940'
+app/views/api/v1/users/show.json.jbuilder:1:in `_app_views_api_v__users_show_json_jbuilder__2265418901864011504_47269222770220'
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/api/v1/users/1" for ::1 at 2019-07-01 18:58:21 -0300
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"1", "user"=>{}}
+  Rendering api/v1/users/show.json.jbuilder
+  Rendered api/v1/users/_user.json.jbuilder (5184.3ms)
+  Rendered api/v1/users/show.json.jbuilder (5187.6ms)
+Completed 500 Internal Server Error in 5190ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    1: byebug
+    2: json.name user.name
+    3: json.address user.address
+    4: json.number user.number
+    5: json.telephone user.telephone
+  
+app/views/api/v1/users/_user.json.jbuilder:2:in `_app_views_api_v__users__user_json_jbuilder___944544933614532275_47269227727560'
+app/views/api/v1/users/show.json.jbuilder:1:in `_app_views_api_v__users_show_json_jbuilder__2265418901864011504_47269227865500'
+Started GET "/api/v1/users/1" for ::1 at 2019-07-01 18:59:29 -0300
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"1", "user"=>{}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:36
+  Rendering api/v1/users/show.json.jbuilder
+  Rendered api/v1/users/_user.json.jbuilder (0.7ms)
+  Rendered api/v1/users/show.json.jbuilder (2.0ms)
+Completed 200 OK in 24ms (Views: 3.7ms | ActiveRecord: 9.1ms)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2019-07-01 19:00:38 -0300
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"1", "user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:33
+  Rendering api/v1/users/show.json.jbuilder
+  Rendered api/v1/users/_user.json.jbuilder (0.5ms)
+  Rendered api/v1/users/show.json.jbuilder (1.8ms)
+Completed 200 OK in 17ms (Views: 3.2ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/api/v1/users/2" for ::1 at 2019-07-01 19:00:42 -0300
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"2", "user"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:33
+Completed 404 Not Found in 3ms (ActiveRecord: 0.4ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=2):
+  
+app/controllers/api/v1/users_controller.rb:33:in `set_user'
+Started GET "/api/v1/users/1" for ::1 at 2019-07-01 19:00:43 -0300
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"1", "user"=>{}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:33
+  Rendering api/v1/users/show.json.jbuilder
+  Rendered api/v1/users/_user.json.jbuilder (0.5ms)
+  Rendered api/v1/users/show.json.jbuilder (1.9ms)
+Completed 200 OK in 6ms (Views: 3.2ms | ActiveRecord: 0.5ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3550744802028369960)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateSales (20190701220501)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(3550744802028369960)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3550744802028369960)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateSales (20190701220501)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(3550744802028369960)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3550744802028369960)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateSales (20190701220501)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (23.6ms)[0m  [1m[35mCREATE TABLE "sales" ("id" bigserial primary key, "user_id" bigint, "address" character varying, "number" integer, "apt" integer, "complement" character varying, "reference" character varying, "phone" character varying, "cell_phone" character varying, "birthday_name" character varying, "year" integer, "number_children" integer, "age_range" character varying, "amount_adult" integer, "hour" character varying, "date_event" date, "day_week" character varying, "date_final" date, "freight" float, "days_collect" integer, "value_final" float, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_8e94f16ccc"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  ↳ db/migrate/20190701220501_create_sales.rb:3
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE  INDEX  "index_sales_on_user_id" ON "sales"  ("user_id")[0m
+  ↳ db/migrate/20190701220501_create_sales.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190701220501"]]
+  ↳ bin/rails:9
+  [1m[35m (2.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (1.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(3550744802028369960)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3550744802028369960)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateSaleProducts (20190701224339)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (5.4ms)[0m  [1m[35mCREATE TABLE "sale_products" ("id" bigserial primary key, "product_id" bigint, "sale_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_35f440f64a"
+FOREIGN KEY ("product_id")
+  REFERENCES "products" ("id")
+, CONSTRAINT "fk_rails_d455fb70e2"
+FOREIGN KEY ("sale_id")
+  REFERENCES "sales" ("id")
+)[0m
+  ↳ db/migrate/20190701224339_create_sale_products.rb:3
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE  INDEX  "index_sale_products_on_product_id" ON "sale_products"  ("product_id")[0m
+  ↳ db/migrate/20190701224339_create_sale_products.rb:3
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE  INDEX  "index_sale_products_on_sale_id" ON "sale_products"  ("sale_id")[0m
+  ↳ db/migrate/20190701224339_create_sale_products.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190701224339"]]
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(3550744802028369960)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/api/v1/users/1" for ::1 at 2019-07-01 19:49:54 -0300
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/mateus/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"1", "user"=>{}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:33
+  Rendering api/v1/users/show.json.jbuilder
+  Rendered api/v1/users/_user.json.jbuilder (0.5ms)
+  Rendered api/v1/users/show.json.jbuilder (3.0ms)
+Completed 200 OK in 25ms (Views: 6.2ms | ActiveRecord: 6.4ms)
+
+
+Started GET "/api/v1/users" for ::1 at 2019-07-01 19:50:23 -0300
+Processing by Api::V1::UsersController#index as JSON
+  Parameters: {"user"=>{}}
+  Rendering api/v1/users/index.json.jbuilder
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/api/v1/users/index.json.jbuilder:1
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/api/v1/users/index.json.jbuilder:2
+  Rendered api/v1/users/_user.json.jbuilder (0.7ms)
+  Rendered api/v1/users/index.json.jbuilder (6.9ms)
+Completed 200 OK in 10ms (Views: 7.4ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/api/v1/users" for ::1 at 2019-07-01 19:53:39 -0300
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"name"=>"conjunto de toalhas", "amount"=>"50", "value"=>"10,00", "value_smash"=>"8,00", "user"=>{"name"=>"conjunto de toalhas"}}
+Unpermitted parameters: :amount, :value, :value_smash, :format, :user
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/users_controller.rb:6
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/users_controller.rb:6
+Completed 422 Unprocessable Entity in 1144ms (Views: 0.4ms | ActiveRecord: 7.7ms)
+
+
+Started POST "/api/v1/products" for ::1 at 2019-07-01 19:53:55 -0300
+Processing by Api::V1::ProductsController#create as JSON
+  Parameters: {"name"=>"conjunto de toalhas", "amount"=>"50", "value"=>"10,00", "value_smash"=>"8,00", "product"=>{"name"=>"conjunto de toalhas", "amount"=>"50", "value"=>"10,00", "value_smash"=>"8,00"}}
+Unpermitted parameters: :format, :product
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/products_controller.rb:7
+  [1m[36mProduct Create (1.7ms)[0m  [1m[32mINSERT INTO "products" ("name", "amount", "value", "value_smash", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "conjunto de toalhas"], ["amount", 50], ["value", 10.0], ["value_smash", 8.0], ["created_at", "2019-07-01 22:53:55.446969"], ["updated_at", "2019-07-01 22:53:55.446969"]]
+  ↳ app/controllers/api/v1/products_controller.rb:7
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/products_controller.rb:7
+Completed 200 OK in 29ms (Views: 0.7ms | ActiveRecord: 8.0ms)
+
+
+Started PATCH "/api/v1/products/1" for ::1 at 2019-07-01 19:54:32 -0300
+Processing by Api::V1::ProductsController#update as JSON
+  Parameters: {"name"=>"conjunto de toalhas", "amount"=>"50", "value"=>"10,00", "value_smash"=>"8,00", "id"=>"1", "product"=>{"name"=>"conjunto de toalhas", "amount"=>"50", "value"=>"10,00", "value_smash"=>"8,00"}}
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/products_controller.rb:40
+Unpermitted parameters: :format, :product
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/products_controller.rb:20
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/products_controller.rb:20
+  Rendering api/v1/products/update.json.jbuilder
+  Rendered api/v1/products/_product.json.jbuilder (1.4ms)
+  Rendered api/v1/products/update.json.jbuilder (4.5ms)
+Completed 200 OK in 21ms (Views: 9.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/v1/products/1" for ::1 at 2019-07-01 19:54:55 -0300
+Processing by Api::V1::ProductsController#show as JSON
+  Parameters: {"id"=>"1", "product"=>{}}
+  [1m[36mProduct Load (1.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/products_controller.rb:40
+Completed 200 OK in 4ms (Views: 0.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/v1/products" for ::1 at 2019-07-01 19:55:11 -0300
+Processing by Api::V1::ProductsController#index as JSON
+  Parameters: {"product"=>{}}
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/api/v1/products_controller.rb:16
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/products" for ::1 at 2019-07-01 19:58:36 -0300
+Processing by Api::V1::ProductsController#index as JSON
+  Parameters: {"product"=>{}}
+  Rendering api/v1/products/index.json.jbuilder
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  ↳ app/views/api/v1/products/index.json.jbuilder:1
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/api/v1/products/index.json.jbuilder:2
+  Rendered api/v1/products/_product.json.jbuilder (3.0ms)
+  Rendered api/v1/products/index.json.jbuilder (29.8ms)
+Completed 200 OK in 38ms (Views: 29.4ms | ActiveRecord: 4.9ms)
+
+
+Started POST "/api/v1/sales" for ::1 at 2019-07-01 20:06:56 -0300
+Processing by Api::V1::SalesController#create as JSON
+  Parameters: {"address"=>"Rua Pouso Alegre", "number"=>"2486", "reference"=>"Perto da Praça", "cell_phone"=>"313512", "birthday_name"=>"Pedro Ferreira", "year"=>"12", "number_children"=>"20", "age_range"=>"10 a 15", "amount_adult"=>"15", "hour"=>"19:30", "date_event"=>"22/07/2019", "day_week"=>"Sexta-Feira", "date_final"=>"22/07/2019", "freight"=>"10,00", "days_collect"=>"1", "sale"=>{"address"=>"Rua Pouso Alegre", "number"=>"2486", "reference"=>"Perto da Praça", "cell_phone"=>"313512", "birthday_name"=>"Pedro Ferreira", "year"=>"12", "number_children"=>"20", "age_range"=>"10 a 15", "amount_adult"=>"15", "hour"=>"19:30", "date_event"=>"22/07/2019", "day_week"=>"Sexta-Feira", "date_final"=>"22/07/2019", "freight"=>"10,00", "days_collect"=>"1"}}
+Unpermitted parameters: :format, :sale
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/sales_controller.rb:7
+  [1m[36mSale Create (0.9ms)[0m  [1m[32mINSERT INTO "sales" ("address", "number", "reference", "cell_phone", "birthday_name", "year", "number_children", "age_range", "amount_adult", "hour", "date_event", "day_week", "date_final", "freight", "days_collect", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17) RETURNING "id"[0m  [["address", "Rua Pouso Alegre"], ["number", 2486], ["reference", "Perto da Praça"], ["cell_phone", "313512"], ["birthday_name", "Pedro Ferreira"], ["year", 12], ["number_children", 20], ["age_range", "10 a 15"], ["amount_adult", 15], ["hour", "19:30"], ["date_event", "2019-07-22"], ["day_week", "Sexta-Feira"], ["date_final", "2019-07-22"], ["freight", 10.0], ["days_collect", 1], ["created_at", "2019-07-01 23:06:56.703995"], ["updated_at", "2019-07-01 23:06:56.703995"]]
+  ↳ app/controllers/api/v1/sales_controller.rb:7
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/sales_controller.rb:7
+No template found for Api::V1::SalesController#create, rendering head :no_content
+Completed 204 No Content in 92ms (ActiveRecord: 9.9ms)
+
+
+Started POST "/api/v1/sales" for ::1 at 2019-07-01 20:11:22 -0300
+Processing by Api::V1::SalesController#create as JSON
+  Parameters: {"address"=>"Rua Pouso Alegre", "number"=>"2486", "reference"=>"Perto da Praça", "cell_phone"=>"313512", "birthday_name"=>"Pedro Ferreira", "year"=>"12", "number_children"=>"20", "age_range"=>"10 a 15", "amount_adult"=>"15", "hour"=>"19:30", "date_event"=>"22/07/2019", "day_week"=>"Sexta-Feira", "date_final"=>"22/07/2019", "freight"=>"10,00", "days_collect"=>"1", "sale"=>{"address"=>"Rua Pouso Alegre", "number"=>"2486", "reference"=>"Perto da Praça", "cell_phone"=>"313512", "birthday_name"=>"Pedro Ferreira", "year"=>"12", "number_children"=>"20", "age_range"=>"10 a 15", "amount_adult"=>"15", "hour"=>"19:30", "date_event"=>"22/07/2019", "day_week"=>"Sexta-Feira", "date_final"=>"22/07/2019", "freight"=>"10,00", "days_collect"=>"1"}}
+Unpermitted parameters: :format, :sale
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/sales_controller.rb:7
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/sales_controller.rb:7
+Completed 422 Unprocessable Entity in 32ms (Views: 0.3ms | ActiveRecord: 4.6ms)
+
+
+Started POST "/api/v1/sales" for ::1 at 2019-07-01 20:11:38 -0300
+Processing by Api::V1::SalesController#create as JSON
+  Parameters: {"address"=>"Rua Pouso Alegre", "number"=>"2486", "reference"=>"Perto da Praça", "cell_phone"=>"313512", "birthday_name"=>"Pedro Ferreira", "year"=>"12", "number_children"=>"20", "age_range"=>"10 a 15", "amount_adult"=>"15", "hour"=>"19:30", "date_event"=>"22/07/2019", "day_week"=>"Sexta-Feira", "date_final"=>"22/07/2019", "freight"=>"10,00", "days_collect"=>"1", "user_id"=>1, "sale"=>{"user_id"=>1, "address"=>"Rua Pouso Alegre", "number"=>"2486", "reference"=>"Perto da Praça", "cell_phone"=>"313512", "birthday_name"=>"Pedro Ferreira", "year"=>"12", "number_children"=>"20", "age_range"=>"10 a 15", "amount_adult"=>"15", "hour"=>"19:30", "date_event"=>"22/07/2019", "day_week"=>"Sexta-Feira", "date_final"=>"22/07/2019", "freight"=>"10,00", "days_collect"=>"1"}}
+Unpermitted parameters: :format, :sale
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/sales_controller.rb:7
+  [1m[36mSale Create (0.9ms)[0m  [1m[32mINSERT INTO "sales" ("user_id", "address", "number", "reference", "cell_phone", "birthday_name", "year", "number_children", "age_range", "amount_adult", "hour", "date_event", "day_week", "date_final", "freight", "days_collect", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18) RETURNING "id"[0m  [["user_id", 1], ["address", "Rua Pouso Alegre"], ["number", 2486], ["reference", "Perto da Praça"], ["cell_phone", "313512"], ["birthday_name", "Pedro Ferreira"], ["year", 12], ["number_children", 20], ["age_range", "10 a 15"], ["amount_adult", 15], ["hour", "19:30"], ["date_event", "2019-07-22"], ["day_week", "Sexta-Feira"], ["date_final", "2019-07-22"], ["freight", 10.0], ["days_collect", 1], ["created_at", "2019-07-01 23:11:38.251826"], ["updated_at", "2019-07-01 23:11:38.251826"]]
+  ↳ app/controllers/api/v1/sales_controller.rb:7
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/sales_controller.rb:7
+No template found for Api::V1::SalesController#create, rendering head :no_content
+Completed 204 No Content in 79ms (ActiveRecord: 1.7ms)
+
+
+Started POST "/api/v1/sales" for ::1 at 2019-07-01 20:12:18 -0300
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/mateus/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Api::V1::SalesController#create as JSON
+  Parameters: {"address"=>"Rua Pouso Alegre", "number"=>"2486", "reference"=>"Perto da Praça", "cell_phone"=>"313512", "birthday_name"=>"Pedro Ferreira", "year"=>"12", "number_children"=>"20", "age_range"=>"10 a 15", "amount_adult"=>"15", "hour"=>"19:30", "date_event"=>"22/07/2019", "day_week"=>"Sexta-Feira", "date_final"=>"22/07/2019", "freight"=>"10,00", "days_collect"=>"1", "user_id"=>1, "sale"=>{"user_id"=>1, "address"=>"Rua Pouso Alegre", "number"=>"2486", "reference"=>"Perto da Praça", "cell_phone"=>"313512", "birthday_name"=>"Pedro Ferreira", "year"=>"12", "number_children"=>"20", "age_range"=>"10 a 15", "amount_adult"=>"15", "hour"=>"19:30", "date_event"=>"22/07/2019", "day_week"=>"Sexta-Feira", "date_final"=>"22/07/2019", "freight"=>"10,00", "days_collect"=>"1"}}
+Unpermitted parameters: :format, :sale
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/sales_controller.rb:7
+  [1m[36mSale Create (1.8ms)[0m  [1m[32mINSERT INTO "sales" ("user_id", "address", "number", "reference", "cell_phone", "birthday_name", "year", "number_children", "age_range", "amount_adult", "hour", "date_event", "day_week", "date_final", "freight", "days_collect", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18) RETURNING "id"[0m  [["user_id", 1], ["address", "Rua Pouso Alegre"], ["number", 2486], ["reference", "Perto da Praça"], ["cell_phone", "313512"], ["birthday_name", "Pedro Ferreira"], ["year", 12], ["number_children", 20], ["age_range", "10 a 15"], ["amount_adult", 15], ["hour", "19:30"], ["date_event", "2019-07-22"], ["day_week", "Sexta-Feira"], ["date_final", "2019-07-22"], ["freight", 10.0], ["days_collect", 1], ["created_at", "2019-07-01 23:12:18.570267"], ["updated_at", "2019-07-01 23:12:18.570267"]]
+  ↳ app/controllers/api/v1/sales_controller.rb:7
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/sales_controller.rb:7
+No template found for Api::V1::SalesController#create, rendering head :no_content
+Completed 204 No Content in 104ms (ActiveRecord: 10.4ms)
+
+
+Started POST "/api/v1/sales" for ::1 at 2019-07-01 20:13:00 -0300
+Processing by Api::V1::SalesController#create as JSON
+  Parameters: {"address"=>"Rua Pouso Alegre", "number"=>"2486", "reference"=>"Perto da Praça", "cell_phone"=>"313512", "birthday_name"=>"Pedro Ferreira", "year"=>"12", "number_children"=>"20", "age_range"=>"10 a 15", "amount_adult"=>"15", "hour"=>"19:30", "date_event"=>"22/07/2019", "day_week"=>"Sexta-Feira", "date_final"=>"22/07/2019", "freight"=>"10,00", "days_collect"=>"1", "user_id"=>1, "sale"=>{"user_id"=>1, "address"=>"Rua Pouso Alegre", "number"=>"2486", "reference"=>"Perto da Praça", "cell_phone"=>"313512", "birthday_name"=>"Pedro Ferreira", "year"=>"12", "number_children"=>"20", "age_range"=>"10 a 15", "amount_adult"=>"15", "hour"=>"19:30", "date_event"=>"22/07/2019", "day_week"=>"Sexta-Feira", "date_final"=>"22/07/2019", "freight"=>"10,00", "days_collect"=>"1"}}
+Unpermitted parameters: :format, :sale
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/sales_controller.rb:6
+  [1m[36mSale Create (0.8ms)[0m  [1m[32mINSERT INTO "sales" ("user_id", "address", "number", "reference", "cell_phone", "birthday_name", "year", "number_children", "age_range", "amount_adult", "hour", "date_event", "day_week", "date_final", "freight", "days_collect", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18) RETURNING "id"[0m  [["user_id", 1], ["address", "Rua Pouso Alegre"], ["number", 2486], ["reference", "Perto da Praça"], ["cell_phone", "313512"], ["birthday_name", "Pedro Ferreira"], ["year", 12], ["number_children", 20], ["age_range", "10 a 15"], ["amount_adult", 15], ["hour", "19:30"], ["date_event", "2019-07-22"], ["day_week", "Sexta-Feira"], ["date_final", "2019-07-22"], ["freight", 10.0], ["days_collect", 1], ["created_at", "2019-07-01 23:13:00.310614"], ["updated_at", "2019-07-01 23:13:00.310614"]]
+  ↳ app/controllers/api/v1/sales_controller.rb:6
+  [1m[35m (2.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/sales_controller.rb:6
+  Rendering api/v1/sales/create.json.jbuilder
+  Rendered api/v1/sales/_sale.json.jbuilder (11.2ms)
+  Rendered api/v1/sales/create.json.jbuilder (13.2ms)
+Completed 500 Internal Server Error in 58ms (ActiveRecord: 10.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `user' for #<Sale:0x000055c3c1c35d40>
+Did you mean?  user_id):
+    13: json.date_final sale.date_final
+    14: json.freight sale.freight
+    15: json.days_collect sale.days_collect
+    16: json.user sale.user
+  
+app/views/api/v1/sales/_sale.json.jbuilder:16:in `_app_views_api_v__sales__sale_json_jbuilder___756947599473964826_47149622568900'
+app/views/api/v1/sales/create.json.jbuilder:1:in `_app_views_api_v__sales_create_json_jbuilder__4257891727080746116_47149622840340'
+Started POST "/api/v1/sales" for ::1 at 2019-07-01 20:13:44 -0300
+Processing by Api::V1::SalesController#create as JSON
+  Parameters: {"address"=>"Rua Pouso Alegre", "number"=>"2486", "reference"=>"Perto da Praça", "cell_phone"=>"313512", "birthday_name"=>"Pedro Ferreira", "year"=>"12", "number_children"=>"20", "age_range"=>"10 a 15", "amount_adult"=>"15", "hour"=>"19:30", "date_event"=>"22/07/2019", "day_week"=>"Sexta-Feira", "date_final"=>"22/07/2019", "freight"=>"10,00", "days_collect"=>"1", "user_id"=>1, "sale"=>{"user_id"=>1, "address"=>"Rua Pouso Alegre", "number"=>"2486", "reference"=>"Perto da Praça", "cell_phone"=>"313512", "birthday_name"=>"Pedro Ferreira", "year"=>"12", "number_children"=>"20", "age_range"=>"10 a 15", "amount_adult"=>"15", "hour"=>"19:30", "date_event"=>"22/07/2019", "day_week"=>"Sexta-Feira", "date_final"=>"22/07/2019", "freight"=>"10,00", "days_collect"=>"1"}}
+Unpermitted parameters: :format, :sale
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/sales_controller.rb:6
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/sales_controller.rb:6
+  [1m[36mSale Create (1.3ms)[0m  [1m[32mINSERT INTO "sales" ("user_id", "address", "number", "reference", "cell_phone", "birthday_name", "year", "number_children", "age_range", "amount_adult", "hour", "date_event", "day_week", "date_final", "freight", "days_collect", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18) RETURNING "id"[0m  [["user_id", 1], ["address", "Rua Pouso Alegre"], ["number", 2486], ["reference", "Perto da Praça"], ["cell_phone", "313512"], ["birthday_name", "Pedro Ferreira"], ["year", 12], ["number_children", 20], ["age_range", "10 a 15"], ["amount_adult", 15], ["hour", "19:30"], ["date_event", "2019-07-22"], ["day_week", "Sexta-Feira"], ["date_final", "2019-07-22"], ["freight", 10.0], ["days_collect", 1], ["created_at", "2019-07-01 23:13:44.617231"], ["updated_at", "2019-07-01 23:13:44.617231"]]
+  ↳ app/controllers/api/v1/sales_controller.rb:6
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/sales_controller.rb:6
+  Rendering api/v1/sales/create.json.jbuilder
+  Rendered api/v1/sales/_sale.json.jbuilder (0.6ms)
+  Rendered api/v1/sales/create.json.jbuilder (2.2ms)
+Completed 200 OK in 103ms (Views: 3.3ms | ActiveRecord: 13.7ms)
+
+
+Started PATCH "/api/v1/sales/1" for ::1 at 2019-07-01 20:14:08 -0300
+Processing by Api::V1::SalesController#update as JSON
+  Parameters: {"address"=>"Rua Pouso Alegre", "number"=>"2486", "reference"=>"Perto da Praça", "cell_phone"=>"313512", "birthday_name"=>"Pedro Ferreira", "year"=>"12", "number_children"=>"20", "age_range"=>"10 a 15", "amount_adult"=>"15", "hour"=>"19:30", "date_event"=>"22/07/2019", "day_week"=>"Sexta-Feira", "date_final"=>"22/07/2019", "freight"=>"10,00", "days_collect"=>"1", "user_id"=>1, "id"=>"1", "sale"=>{"user_id"=>1, "address"=>"Rua Pouso Alegre", "number"=>"2486", "reference"=>"Perto da Praça", "cell_phone"=>"313512", "birthday_name"=>"Pedro Ferreira", "year"=>"12", "number_children"=>"20", "age_range"=>"10 a 15", "amount_adult"=>"15", "hour"=>"19:30", "date_event"=>"22/07/2019", "day_week"=>"Sexta-Feira", "date_final"=>"22/07/2019", "freight"=>"10,00", "days_collect"=>"1"}}
+  [1m[36mSale Load (0.4ms)[0m  [1m[34mSELECT  "sales".* FROM "sales" WHERE "sales"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/sales_controller.rb:33
+Unpermitted parameters: :format, :sale
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/sales_controller.rb:17
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/sales_controller.rb:17
+Completed 422 Unprocessable Entity in 119ms (ActiveRecord: 0.8ms)
+
+
+  
+ActiveRecord::RecordInvalid (translation missing: pt-BR.activerecord.errors.messages.record_invalid):
+  
+app/controllers/api/v1/sales_controller.rb:17:in `update'
+Started PATCH "/api/v1/sales/2" for ::1 at 2019-07-01 20:14:17 -0300
+Processing by Api::V1::SalesController#update as JSON
+  Parameters: {"address"=>"Rua Pouso Alegre", "number"=>"2486", "reference"=>"Perto da Praça", "cell_phone"=>"313512", "birthday_name"=>"Pedro Ferreira", "year"=>"12", "number_children"=>"20", "age_range"=>"10 a 15", "amount_adult"=>"15", "hour"=>"19:30", "date_event"=>"22/07/2019", "day_week"=>"Sexta-Feira", "date_final"=>"22/07/2019", "freight"=>"10,00", "days_collect"=>"1", "user_id"=>1, "id"=>"2", "sale"=>{"user_id"=>1, "address"=>"Rua Pouso Alegre", "number"=>"2486", "reference"=>"Perto da Praça", "cell_phone"=>"313512", "birthday_name"=>"Pedro Ferreira", "year"=>"12", "number_children"=>"20", "age_range"=>"10 a 15", "amount_adult"=>"15", "hour"=>"19:30", "date_event"=>"22/07/2019", "day_week"=>"Sexta-Feira", "date_final"=>"22/07/2019", "freight"=>"10,00", "days_collect"=>"1"}}
+  [1m[36mSale Load (0.4ms)[0m  [1m[34mSELECT  "sales".* FROM "sales" WHERE "sales"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/sales_controller.rb:33
+Unpermitted parameters: :format, :sale
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/sales_controller.rb:17
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/sales_controller.rb:17
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/sales_controller.rb:17
+  Rendering api/v1/sales/update.json.jbuilder
+  Rendered api/v1/sales/_sale.json.jbuilder (0.6ms)
+  Rendered api/v1/sales/update.json.jbuilder (3.5ms)
+Completed 200 OK in 16ms (Views: 5.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/v1/sales/2" for ::1 at 2019-07-01 20:14:28 -0300
+Processing by Api::V1::SalesController#show as JSON
+  Parameters: {"id"=>"2", "sale"=>{}}
+  [1m[36mSale Load (1.6ms)[0m  [1m[34mSELECT  "sales".* FROM "sales" WHERE "sales"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/sales_controller.rb:33
+  Rendering api/v1/sales/show.json.jbuilder
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/v1/sales/_sale.json.jbuilder:16
+  Rendered api/v1/sales/_sale.json.jbuilder (2.4ms)
+  Rendered api/v1/sales/show.json.jbuilder (4.5ms)
+Completed 200 OK in 11ms (Views: 5.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/api/v1/sales" for ::1 at 2019-07-01 20:14:43 -0300
+Processing by Api::V1::SalesController#index as JSON
+  Parameters: {"sale"=>{}}
+  Rendering api/v1/sales/index.json.jbuilder
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "sales"[0m
+  ↳ app/views/api/v1/sales/index.json.jbuilder:1
+  [1m[36mSale Load (0.3ms)[0m  [1m[34mSELECT  "sales".* FROM "sales" LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/api/v1/sales/index.json.jbuilder:2
+  Rendered api/v1/sales/_sale.json.jbuilder (0.9ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/v1/sales/_sale.json.jbuilder:16
+  Rendered api/v1/sales/_sale.json.jbuilder (1.6ms)
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/v1/sales/_sale.json.jbuilder:16
+  Rendered api/v1/sales/_sale.json.jbuilder (3.5ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/v1/sales/_sale.json.jbuilder:16
+  Rendered api/v1/sales/_sale.json.jbuilder (2.4ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/v1/sales/_sale.json.jbuilder:16
+  Rendered api/v1/sales/_sale.json.jbuilder (2.2ms)
+  Rendered api/v1/sales/index.json.jbuilder (30.2ms)
+Completed 200 OK in 33ms (Views: 28.6ms | ActiveRecord: 2.7ms)
+
+

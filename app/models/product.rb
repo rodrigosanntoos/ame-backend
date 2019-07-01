@@ -1,3 +1,6 @@
 class Product < ApplicationRecord
-    validates_presence_of :name, :amount, :value_product, :value_unit, :value_smash
+    has_many :sale_products, dependent: :destroy
+    has_many :products, :through => :sale_products
+
+    validates_presence_of :name, :amount, :value, :value_smash
 end
