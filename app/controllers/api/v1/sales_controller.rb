@@ -3,7 +3,9 @@ class Api::V1::SalesController < ApplicationController
 
     def create
         @sale = Sale.new sale_params
-        if !@sale.save
+        if @sale.save
+            @sale.create_sale_product(params)
+        else
             render json: @sale.errors, status: :unprocessable_entity
         end
     end

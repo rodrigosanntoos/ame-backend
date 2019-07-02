@@ -1917,3 +1917,343 @@ Processing by Api::V1::SalesController#index as JSON
 Completed 200 OK in 33ms (Views: 28.6ms | ActiveRecord: 2.7ms)
 
 
+Started POST "/api/v1/sales" for ::1 at 2019-07-01 20:33:20 -0300
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/mateus/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Api::V1::SalesController#create as JSON
+  Parameters: {"address"=>"Rua Pouso Alegre", "number"=>"2486", "reference"=>"Perto da Praça", "cell_phone"=>"313512", "birthday_name"=>"Pedro Ferreira", "year"=>"12", "number_children"=>"20", "age_range"=>"10 a 15", "amount_adult"=>"15", "hour"=>"19:30", "date_event"=>"22/07/2019", "day_week"=>"Sexta-Feira", "date_final"=>"22/07/2019", "freight"=>"10,00", "days_collect"=>"1", "user_id"=>1, "products"=>"{[product_id: 10, amount: 10]}", "sale"=>{"user_id"=>1, "address"=>"Rua Pouso Alegre", "number"=>"2486", "reference"=>"Perto da Praça", "cell_phone"=>"313512", "birthday_name"=>"Pedro Ferreira", "year"=>"12", "number_children"=>"20", "age_range"=>"10 a 15", "amount_adult"=>"15", "hour"=>"19:30", "date_event"=>"22/07/2019", "day_week"=>"Sexta-Feira", "date_final"=>"22/07/2019", "freight"=>"10,00", "days_collect"=>"1"}}
+Unpermitted parameters: :products, :format, :sale
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/sales_controller.rb:7
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/sales_controller.rb:7
+  [1m[36mSale Create (0.9ms)[0m  [1m[32mINSERT INTO "sales" ("user_id", "address", "number", "reference", "cell_phone", "birthday_name", "year", "number_children", "age_range", "amount_adult", "hour", "date_event", "day_week", "date_final", "freight", "days_collect", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18) RETURNING "id"[0m  [["user_id", 1], ["address", "Rua Pouso Alegre"], ["number", 2486], ["reference", "Perto da Praça"], ["cell_phone", "313512"], ["birthday_name", "Pedro Ferreira"], ["year", 12], ["number_children", 20], ["age_range", "10 a 15"], ["amount_adult", 15], ["hour", "19:30"], ["date_event", "2019-07-22"], ["day_week", "Sexta-Feira"], ["date_final", "2019-07-22"], ["freight", 10.0], ["days_collect", 1], ["created_at", "2019-07-01 23:33:45.278452"], ["updated_at", "2019-07-01 23:33:45.278452"]]
+  ↳ app/controllers/api/v1/sales_controller.rb:7
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/sales_controller.rb:7
+  Rendering api/v1/sales/create.json.jbuilder
+  Rendered api/v1/sales/_sale.json.jbuilder (0.5ms)
+  Rendered api/v1/sales/create.json.jbuilder (3.5ms)
+Completed 200 OK in 24785ms (Views: 5.7ms | ActiveRecord: 16.9ms)
+
+
+Started POST "/api/v1/sales" for ::1 at 2019-07-01 20:34:14 -0300
+Processing by Api::V1::SalesController#create as JSON
+  Parameters: {"address"=>"Rua Pouso Alegre", "number"=>"2486", "reference"=>"Perto da Praça", "cell_phone"=>"313512", "birthday_name"=>"Pedro Ferreira", "year"=>"12", "number_children"=>"20", "age_range"=>"10 a 15", "amount_adult"=>"15", "hour"=>"19:30", "date_event"=>"22/07/2019", "day_week"=>"Sexta-Feira", "date_final"=>"22/07/2019", "freight"=>"10,00", "days_collect"=>"1", "user_id"=>1, "products"=>"[product_id: 10, amount: 10]", "sale"=>{"user_id"=>1, "address"=>"Rua Pouso Alegre", "number"=>"2486", "reference"=>"Perto da Praça", "cell_phone"=>"313512", "birthday_name"=>"Pedro Ferreira", "year"=>"12", "number_children"=>"20", "age_range"=>"10 a 15", "amount_adult"=>"15", "hour"=>"19:30", "date_event"=>"22/07/2019", "day_week"=>"Sexta-Feira", "date_final"=>"22/07/2019", "freight"=>"10,00", "days_collect"=>"1"}}
+Unpermitted parameters: :products, :format, :sale
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/sales_controller.rb:7
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/sales_controller.rb:7
+Started POST "/api/v1/sales" for ::1 at 2019-07-01 20:35:56 -0300
+  [1m[36mSale Create (2.3ms)[0m  [1m[32mINSERT INTO "sales" ("user_id", "address", "number", "reference", "cell_phone", "birthday_name", "year", "number_children", "age_range", "amount_adult", "hour", "date_event", "day_week", "date_final", "freight", "days_collect", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18) RETURNING "id"[0m  [["user_id", 1], ["address", "Rua Pouso Alegre"], ["number", 2486], ["reference", "Perto da Praça"], ["cell_phone", "313512"], ["birthday_name", "Pedro Ferreira"], ["year", 12], ["number_children", 20], ["age_range", "10 a 15"], ["amount_adult", 15], ["hour", "19:30"], ["date_event", "2019-07-22"], ["day_week", "Sexta-Feira"], ["date_final", "2019-07-22"], ["freight", 10.0], ["days_collect", 1], ["created_at", "2019-07-01 23:35:56.016341"], ["updated_at", "2019-07-01 23:35:56.016341"]]
+  ↳ app/controllers/api/v1/sales_controller.rb:7
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/sales_controller.rb:7
+  Rendering api/v1/sales/create.json.jbuilder
+  Rendered api/v1/sales/_sale.json.jbuilder (2.0ms)
+  Rendered api/v1/sales/create.json.jbuilder (7.3ms)
+Completed 200 OK in 101495ms (Views: 10.9ms | ActiveRecord: 4.9ms)
+
+
+Processing by Api::V1::SalesController#create as JSON
+  Parameters: {"address"=>"Rua Pouso Alegre", "number"=>"2486", "reference"=>"Perto da Praça", "cell_phone"=>"313512", "birthday_name"=>"Pedro Ferreira", "year"=>"12", "number_children"=>"20", "age_range"=>"10 a 15", "amount_adult"=>"15", "hour"=>"19:30", "date_event"=>"22/07/2019", "day_week"=>"Sexta-Feira", "date_final"=>"22/07/2019", "freight"=>"10,00", "days_collect"=>"1", "user_id"=>1, "products"=>"product_id: 10, amount: 10||product_id: 29, amount: 20", "sale"=>{"user_id"=>1, "address"=>"Rua Pouso Alegre", "number"=>"2486", "reference"=>"Perto da Praça", "cell_phone"=>"313512", "birthday_name"=>"Pedro Ferreira", "year"=>"12", "number_children"=>"20", "age_range"=>"10 a 15", "amount_adult"=>"15", "hour"=>"19:30", "date_event"=>"22/07/2019", "day_week"=>"Sexta-Feira", "date_final"=>"22/07/2019", "freight"=>"10,00", "days_collect"=>"1"}}
+Unpermitted parameters: :products, :format, :sale
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/sales_controller.rb:7
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/sales_controller.rb:7
+  [1m[36mSale Create (0.8ms)[0m  [1m[32mINSERT INTO "sales" ("user_id", "address", "number", "reference", "cell_phone", "birthday_name", "year", "number_children", "age_range", "amount_adult", "hour", "date_event", "day_week", "date_final", "freight", "days_collect", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18) RETURNING "id"[0m  [["user_id", 1], ["address", "Rua Pouso Alegre"], ["number", 2486], ["reference", "Perto da Praça"], ["cell_phone", "313512"], ["birthday_name", "Pedro Ferreira"], ["year", 12], ["number_children", 20], ["age_range", "10 a 15"], ["amount_adult", 15], ["hour", "19:30"], ["date_event", "2019-07-22"], ["day_week", "Sexta-Feira"], ["date_final", "2019-07-22"], ["freight", 10.0], ["days_collect", 1], ["created_at", "2019-07-01 23:36:40.587085"], ["updated_at", "2019-07-01 23:36:40.587085"]]
+  ↳ app/controllers/api/v1/sales_controller.rb:7
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/sales_controller.rb:7
+  Rendering api/v1/sales/create.json.jbuilder
+  Rendered api/v1/sales/_sale.json.jbuilder (0.1ms)
+  Rendered api/v1/sales/create.json.jbuilder (1.0ms)
+Completed 200 OK in 44540ms (Views: 1.7ms | ActiveRecord: 1.9ms)
+
+
+Started POST "/api/v1/sales" for ::1 at 2019-07-01 20:37:19 -0300
+Processing by Api::V1::SalesController#create as JSON
+  Parameters: {"address"=>"Rua Pouso Alegre", "number"=>"2486", "reference"=>"Perto da Praça", "cell_phone"=>"313512", "birthday_name"=>"Pedro Ferreira", "year"=>"12", "number_children"=>"20", "age_range"=>"10 a 15", "amount_adult"=>"15", "hour"=>"19:30", "date_event"=>"22/07/2019", "day_week"=>"Sexta-Feira", "date_final"=>"22/07/2019", "freight"=>"10,00", "days_collect"=>"1", "user_id"=>1, "products"=>"2,10||3,20", "sale"=>{"user_id"=>1, "address"=>"Rua Pouso Alegre", "number"=>"2486", "reference"=>"Perto da Praça", "cell_phone"=>"313512", "birthday_name"=>"Pedro Ferreira", "year"=>"12", "number_children"=>"20", "age_range"=>"10 a 15", "amount_adult"=>"15", "hour"=>"19:30", "date_event"=>"22/07/2019", "day_week"=>"Sexta-Feira", "date_final"=>"22/07/2019", "freight"=>"10,00", "days_collect"=>"1"}}
+Unpermitted parameters: :products, :format, :sale
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/sales_controller.rb:7
+  [1m[36mUser Load (3.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/sales_controller.rb:7
+  [1m[36mSale Create (1.4ms)[0m  [1m[32mINSERT INTO "sales" ("user_id", "address", "number", "reference", "cell_phone", "birthday_name", "year", "number_children", "age_range", "amount_adult", "hour", "date_event", "day_week", "date_final", "freight", "days_collect", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18) RETURNING "id"[0m  [["user_id", 1], ["address", "Rua Pouso Alegre"], ["number", 2486], ["reference", "Perto da Praça"], ["cell_phone", "313512"], ["birthday_name", "Pedro Ferreira"], ["year", 12], ["number_children", 20], ["age_range", "10 a 15"], ["amount_adult", 15], ["hour", "19:30"], ["date_event", "2019-07-22"], ["day_week", "Sexta-Feira"], ["date_final", "2019-07-22"], ["freight", 10.0], ["days_collect", 1], ["created_at", "2019-07-02 00:21:20.415831"], ["updated_at", "2019-07-02 00:21:20.415831"]]
+  ↳ app/controllers/api/v1/sales_controller.rb:7
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/sales_controller.rb:7
+  Rendering api/v1/sales/create.json.jbuilder
+  Rendered api/v1/sales/_sale.json.jbuilder (1.5ms)
+  Rendered api/v1/sales/create.json.jbuilder (5.6ms)
+Completed 200 OK in 2640930ms (Views: 8.9ms | ActiveRecord: 6.8ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3550744802028369960)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to AddDetailsToSaleProduct (20190702002506)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "sale_products" ADD "amount" integer[0m
+  ↳ db/migrate/20190702002506_add_details_to_sale_product.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190702002506"]]
+  ↳ bin/rails:9
+  [1m[35m (2.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(3550744802028369960)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started POST "/api/v1/sales" for ::1 at 2019-07-01 21:27:55 -0300
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/mateus/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Api::V1::SalesController#create as JSON
+  Parameters: {"address"=>"Rua Pouso Alegre", "number"=>"2486", "reference"=>"Perto da Praça", "cell_phone"=>"313512", "birthday_name"=>"Pedro Ferreira", "year"=>"12", "number_children"=>"20", "age_range"=>"10 a 15", "amount_adult"=>"15", "hour"=>"19:30", "date_event"=>"22/07/2019", "day_week"=>"Sexta-Feira", "date_final"=>"22/07/2019", "freight"=>"10,00", "days_collect"=>"1", "user_id"=>1, "products"=>"2,10||3,20", "sale"=>{"user_id"=>1, "address"=>"Rua Pouso Alegre", "number"=>"2486", "reference"=>"Perto da Praça", "cell_phone"=>"313512", "birthday_name"=>"Pedro Ferreira", "year"=>"12", "number_children"=>"20", "age_range"=>"10 a 15", "amount_adult"=>"15", "hour"=>"19:30", "date_event"=>"22/07/2019", "day_week"=>"Sexta-Feira", "date_final"=>"22/07/2019", "freight"=>"10,00", "days_collect"=>"1"}}
+Unpermitted parameters: :products, :format, :sale
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/sales_controller.rb:7
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/sales_controller.rb:7
+  [1m[36mSale Create (0.9ms)[0m  [1m[32mINSERT INTO "sales" ("user_id", "address", "number", "reference", "cell_phone", "birthday_name", "year", "number_children", "age_range", "amount_adult", "hour", "date_event", "day_week", "date_final", "freight", "days_collect", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18) RETURNING "id"[0m  [["user_id", 1], ["address", "Rua Pouso Alegre"], ["number", 2486], ["reference", "Perto da Praça"], ["cell_phone", "313512"], ["birthday_name", "Pedro Ferreira"], ["year", 12], ["number_children", 20], ["age_range", "10 a 15"], ["amount_adult", 15], ["hour", "19:30"], ["date_event", "2019-07-22"], ["day_week", "Sexta-Feira"], ["date_final", "2019-07-22"], ["freight", 10.0], ["days_collect", 1], ["created_at", "2019-07-02 00:28:01.700983"], ["updated_at", "2019-07-02 00:28:01.700983"]]
+  ↳ app/controllers/api/v1/sales_controller.rb:7
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/sales_controller.rb:7
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/sale.rb:12
+Completed 404 Not Found in 6002ms (ActiveRecord: 17.5ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Product with 'id'=2):
+  
+app/models/sale.rb:12:in `block in create_sale_product'
+app/models/sale.rb:11:in `each'
+app/models/sale.rb:11:in `create_sale_product'
+app/controllers/api/v1/sales_controller.rb:8:in `create'
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "products"."id" FROM "products"[0m
+Started POST "/api/v1/sales" for ::1 at 2019-07-01 21:28:43 -0300
+Processing by Api::V1::SalesController#create as JSON
+  Parameters: {"address"=>"Rua Pouso Alegre", "number"=>"2486", "reference"=>"Perto da Praça", "cell_phone"=>"313512", "birthday_name"=>"Pedro Ferreira", "year"=>"12", "number_children"=>"20", "age_range"=>"10 a 15", "amount_adult"=>"15", "hour"=>"19:30", "date_event"=>"22/07/2019", "day_week"=>"Sexta-Feira", "date_final"=>"22/07/2019", "freight"=>"10,00", "days_collect"=>"1", "user_id"=>1, "products"=>"1,10", "sale"=>{"user_id"=>1, "address"=>"Rua Pouso Alegre", "number"=>"2486", "reference"=>"Perto da Praça", "cell_phone"=>"313512", "birthday_name"=>"Pedro Ferreira", "year"=>"12", "number_children"=>"20", "age_range"=>"10 a 15", "amount_adult"=>"15", "hour"=>"19:30", "date_event"=>"22/07/2019", "day_week"=>"Sexta-Feira", "date_final"=>"22/07/2019", "freight"=>"10,00", "days_collect"=>"1"}}
+Unpermitted parameters: :products, :format, :sale
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/sales_controller.rb:6
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/sales_controller.rb:6
+  [1m[36mSale Create (0.6ms)[0m  [1m[32mINSERT INTO "sales" ("user_id", "address", "number", "reference", "cell_phone", "birthday_name", "year", "number_children", "age_range", "amount_adult", "hour", "date_event", "day_week", "date_final", "freight", "days_collect", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18) RETURNING "id"[0m  [["user_id", 1], ["address", "Rua Pouso Alegre"], ["number", 2486], ["reference", "Perto da Praça"], ["cell_phone", "313512"], ["birthday_name", "Pedro Ferreira"], ["year", 12], ["number_children", 20], ["age_range", "10 a 15"], ["amount_adult", 15], ["hour", "19:30"], ["date_event", "2019-07-22"], ["day_week", "Sexta-Feira"], ["date_final", "2019-07-22"], ["freight", 10.0], ["days_collect", 1], ["created_at", "2019-07-02 00:28:44.016296"], ["updated_at", "2019-07-02 00:28:44.016296"]]
+  ↳ app/controllers/api/v1/sales_controller.rb:6
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/sales_controller.rb:6
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/sale.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/sale.rb:14
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/sale.rb:14
+  [1m[36mSaleProduct Create (1.0ms)[0m  [1m[32mINSERT INTO "sale_products" ("product_id", "sale_id", "created_at", "updated_at", "amount") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["product_id", 1], ["sale_id", 11], ["created_at", "2019-07-02 00:28:44.056720"], ["updated_at", "2019-07-02 00:28:44.056720"], ["amount", 0]]
+  ↳ app/models/sale.rb:14
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/sale.rb:14
+  Rendering api/v1/sales/create.json.jbuilder
+  Rendered api/v1/sales/_sale.json.jbuilder (0.5ms)
+  Rendered api/v1/sales/create.json.jbuilder (2.8ms)
+Completed 200 OK in 112ms (Views: 4.6ms | ActiveRecord: 20.1ms)
+
+
+Started POST "/api/v1/sales" for ::1 at 2019-07-01 21:29:24 -0300
+Processing by Api::V1::SalesController#create as JSON
+  Parameters: {"address"=>"Rua Pouso Alegre", "number"=>"2486", "reference"=>"Perto da Praça", "cell_phone"=>"313512", "birthday_name"=>"Pedro Ferreira", "year"=>"12", "number_children"=>"20", "age_range"=>"10 a 15", "amount_adult"=>"15", "hour"=>"19:30", "date_event"=>"22/07/2019", "day_week"=>"Sexta-Feira", "date_final"=>"22/07/2019", "freight"=>"10,00", "days_collect"=>"1", "user_id"=>1, "products"=>"1,10||3,20", "sale"=>{"user_id"=>1, "address"=>"Rua Pouso Alegre", "number"=>"2486", "reference"=>"Perto da Praça", "cell_phone"=>"313512", "birthday_name"=>"Pedro Ferreira", "year"=>"12", "number_children"=>"20", "age_range"=>"10 a 15", "amount_adult"=>"15", "hour"=>"19:30", "date_event"=>"22/07/2019", "day_week"=>"Sexta-Feira", "date_final"=>"22/07/2019", "freight"=>"10,00", "days_collect"=>"1"}}
+Unpermitted parameters: :products, :format, :sale
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/sales_controller.rb:6
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/sales_controller.rb:6
+  [1m[36mSale Create (0.5ms)[0m  [1m[32mINSERT INTO "sales" ("user_id", "address", "number", "reference", "cell_phone", "birthday_name", "year", "number_children", "age_range", "amount_adult", "hour", "date_event", "day_week", "date_final", "freight", "days_collect", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18) RETURNING "id"[0m  [["user_id", 1], ["address", "Rua Pouso Alegre"], ["number", 2486], ["reference", "Perto da Praça"], ["cell_phone", "313512"], ["birthday_name", "Pedro Ferreira"], ["year", 12], ["number_children", 20], ["age_range", "10 a 15"], ["amount_adult", 15], ["hour", "19:30"], ["date_event", "2019-07-22"], ["day_week", "Sexta-Feira"], ["date_final", "2019-07-22"], ["freight", 10.0], ["days_collect", 1], ["created_at", "2019-07-02 00:29:24.098170"], ["updated_at", "2019-07-02 00:29:24.098170"]]
+  ↳ app/controllers/api/v1/sales_controller.rb:6
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/sales_controller.rb:6
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/sale.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/sale.rb:15
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/sale.rb:15
+  [1m[36mSaleProduct Create (0.4ms)[0m  [1m[32mINSERT INTO "sale_products" ("product_id", "sale_id", "created_at", "updated_at", "amount") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["product_id", 1], ["sale_id", 12], ["created_at", "2019-07-02 00:29:29.149587"], ["updated_at", "2019-07-02 00:29:29.149587"], ["amount", 0]]
+  ↳ app/models/sale.rb:15
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/sale.rb:15
+  [1m[36mProduct Load (1.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ (byebug):1
+  [1m[36mProduct Load (1.6ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE (3) LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/models/sale.rb:13
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 11]]
+  ↳ app/models/sale.rb:13
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/models/sale.rb:13
+Completed 404 Not Found in 30049ms (ActiveRecord: 22.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Product with 'id'=3):
+  
+app/models/sale.rb:13:in `block in create_sale_product'
+app/models/sale.rb:11:in `each'
+app/models/sale.rb:11:in `create_sale_product'
+app/controllers/api/v1/sales_controller.rb:7:in `create'
+Started POST "/api/v1/sales" for ::1 at 2019-07-01 21:30:47 -0300
+Processing by Api::V1::SalesController#create as JSON
+  Parameters: {"address"=>"Rua Pouso Alegre", "number"=>"2486", "reference"=>"Perto da Praça", "cell_phone"=>"313512", "birthday_name"=>"Pedro Ferreira", "year"=>"12", "number_children"=>"20", "age_range"=>"10 a 15", "amount_adult"=>"15", "hour"=>"19:30", "date_event"=>"22/07/2019", "day_week"=>"Sexta-Feira", "date_final"=>"22/07/2019", "freight"=>"10,00", "days_collect"=>"1", "user_id"=>1, "products"=>"1,10||3,20", "sale"=>{"user_id"=>1, "address"=>"Rua Pouso Alegre", "number"=>"2486", "reference"=>"Perto da Praça", "cell_phone"=>"313512", "birthday_name"=>"Pedro Ferreira", "year"=>"12", "number_children"=>"20", "age_range"=>"10 a 15", "amount_adult"=>"15", "hour"=>"19:30", "date_event"=>"22/07/2019", "day_week"=>"Sexta-Feira", "date_final"=>"22/07/2019", "freight"=>"10,00", "days_collect"=>"1"}}
+Unpermitted parameters: :products, :format, :sale
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/sales_controller.rb:6
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/sales_controller.rb:6
+  [1m[36mSale Create (0.7ms)[0m  [1m[32mINSERT INTO "sales" ("user_id", "address", "number", "reference", "cell_phone", "birthday_name", "year", "number_children", "age_range", "amount_adult", "hour", "date_event", "day_week", "date_final", "freight", "days_collect", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18) RETURNING "id"[0m  [["user_id", 1], ["address", "Rua Pouso Alegre"], ["number", 2486], ["reference", "Perto da Praça"], ["cell_phone", "313512"], ["birthday_name", "Pedro Ferreira"], ["year", 12], ["number_children", 20], ["age_range", "10 a 15"], ["amount_adult", 15], ["hour", "19:30"], ["date_event", "2019-07-22"], ["day_week", "Sexta-Feira"], ["date_final", "2019-07-22"], ["freight", 10.0], ["days_collect", 1], ["created_at", "2019-07-02 00:30:47.308346"], ["updated_at", "2019-07-02 00:30:47.308346"]]
+  ↳ app/controllers/api/v1/sales_controller.rb:6
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/sales_controller.rb:6
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE (1) ORDER BY "products"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/models/sale.rb:14
+Completed 500 Internal Server Error in 52ms (ActiveRecord: 11.7ms)
+
+
+  
+ActiveRecord::StatementInvalid (PG::DatatypeMismatch: ERROR:  argument of WHERE must be type boolean, not type integer
+LINE 1: SELECT  "products".* FROM "products" WHERE (1) ORDER BY "pro...
+                                                    ^
+: SELECT  "products".* FROM "products" WHERE (1) ORDER BY "products"."id" DESC LIMIT $1):
+  
+app/models/sale.rb:14:in `block in create_sale_product'
+app/models/sale.rb:11:in `each'
+app/models/sale.rb:11:in `create_sale_product'
+app/controllers/api/v1/sales_controller.rb:7:in `create'
+Started POST "/api/v1/sales" for ::1 at 2019-07-01 21:31:10 -0300
+Processing by Api::V1::SalesController#create as JSON
+  Parameters: {"address"=>"Rua Pouso Alegre", "number"=>"2486", "reference"=>"Perto da Praça", "cell_phone"=>"313512", "birthday_name"=>"Pedro Ferreira", "year"=>"12", "number_children"=>"20", "age_range"=>"10 a 15", "amount_adult"=>"15", "hour"=>"19:30", "date_event"=>"22/07/2019", "day_week"=>"Sexta-Feira", "date_final"=>"22/07/2019", "freight"=>"10,00", "days_collect"=>"1", "user_id"=>1, "products"=>"1,10||3,20", "sale"=>{"user_id"=>1, "address"=>"Rua Pouso Alegre", "number"=>"2486", "reference"=>"Perto da Praça", "cell_phone"=>"313512", "birthday_name"=>"Pedro Ferreira", "year"=>"12", "number_children"=>"20", "age_range"=>"10 a 15", "amount_adult"=>"15", "hour"=>"19:30", "date_event"=>"22/07/2019", "day_week"=>"Sexta-Feira", "date_final"=>"22/07/2019", "freight"=>"10,00", "days_collect"=>"1"}}
+Unpermitted parameters: :products, :format, :sale
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/sales_controller.rb:6
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/sales_controller.rb:6
+  [1m[36mSale Create (0.5ms)[0m  [1m[32mINSERT INTO "sales" ("user_id", "address", "number", "reference", "cell_phone", "birthday_name", "year", "number_children", "age_range", "amount_adult", "hour", "date_event", "day_week", "date_final", "freight", "days_collect", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18) RETURNING "id"[0m  [["user_id", 1], ["address", "Rua Pouso Alegre"], ["number", 2486], ["reference", "Perto da Praça"], ["cell_phone", "313512"], ["birthday_name", "Pedro Ferreira"], ["year", 12], ["number_children", 20], ["age_range", "10 a 15"], ["amount_adult", 15], ["hour", "19:30"], ["date_event", "2019-07-22"], ["day_week", "Sexta-Feira"], ["date_final", "2019-07-22"], ["freight", 10.0], ["days_collect", 1], ["created_at", "2019-07-02 00:31:10.412551"], ["updated_at", "2019-07-02 00:31:10.412551"]]
+  ↳ app/controllers/api/v1/sales_controller.rb:6
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/sales_controller.rb:6
+  [1m[36mProduct Load (1.9ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE (1)[0m
+  ↳ app/models/sale.rb:13
+Completed 500 Internal Server Error in 56ms (ActiveRecord: 9.8ms)
+
+
+  
+ActiveRecord::StatementInvalid (PG::DatatypeMismatch: ERROR:  argument of WHERE must be type boolean, not type integer
+LINE 1: SELECT "products".* FROM "products" WHERE (1)
+                                                   ^
+: SELECT "products".* FROM "products" WHERE (1)):
+  
+app/models/sale.rb:13:in `block in create_sale_product'
+app/models/sale.rb:11:in `each'
+app/models/sale.rb:11:in `create_sale_product'
+app/controllers/api/v1/sales_controller.rb:7:in `create'
+Started POST "/api/v1/sales" for ::1 at 2019-07-01 21:31:23 -0300
+Processing by Api::V1::SalesController#create as JSON
+  Parameters: {"address"=>"Rua Pouso Alegre", "number"=>"2486", "reference"=>"Perto da Praça", "cell_phone"=>"313512", "birthday_name"=>"Pedro Ferreira", "year"=>"12", "number_children"=>"20", "age_range"=>"10 a 15", "amount_adult"=>"15", "hour"=>"19:30", "date_event"=>"22/07/2019", "day_week"=>"Sexta-Feira", "date_final"=>"22/07/2019", "freight"=>"10,00", "days_collect"=>"1", "user_id"=>1, "products"=>"1,10||3,20", "sale"=>{"user_id"=>1, "address"=>"Rua Pouso Alegre", "number"=>"2486", "reference"=>"Perto da Praça", "cell_phone"=>"313512", "birthday_name"=>"Pedro Ferreira", "year"=>"12", "number_children"=>"20", "age_range"=>"10 a 15", "amount_adult"=>"15", "hour"=>"19:30", "date_event"=>"22/07/2019", "day_week"=>"Sexta-Feira", "date_final"=>"22/07/2019", "freight"=>"10,00", "days_collect"=>"1"}}
+Unpermitted parameters: :products, :format, :sale
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/sales_controller.rb:6
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/sales_controller.rb:6
+  [1m[36mSale Create (0.6ms)[0m  [1m[32mINSERT INTO "sales" ("user_id", "address", "number", "reference", "cell_phone", "birthday_name", "year", "number_children", "age_range", "amount_adult", "hour", "date_event", "day_week", "date_final", "freight", "days_collect", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18) RETURNING "id"[0m  [["user_id", 1], ["address", "Rua Pouso Alegre"], ["number", 2486], ["reference", "Perto da Praça"], ["cell_phone", "313512"], ["birthday_name", "Pedro Ferreira"], ["year", 12], ["number_children", 20], ["age_range", "10 a 15"], ["amount_adult", 15], ["hour", "19:30"], ["date_event", "2019-07-22"], ["day_week", "Sexta-Feira"], ["date_final", "2019-07-22"], ["freight", 10.0], ["days_collect", 1], ["created_at", "2019-07-02 00:31:23.345098"], ["updated_at", "2019-07-02 00:31:23.345098"]]
+  ↳ app/controllers/api/v1/sales_controller.rb:6
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/sales_controller.rb:6
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1[0m  [["id", 1]]
+  ↳ app/models/sale.rb:13
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/sale.rb:14
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/sale.rb:14
+  [1m[36mSaleProduct Create (0.5ms)[0m  [1m[32mINSERT INTO "sale_products" ("product_id", "sale_id", "created_at", "updated_at", "amount") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["product_id", 1], ["sale_id", 15], ["created_at", "2019-07-02 00:31:23.381375"], ["updated_at", "2019-07-02 00:31:23.381375"], ["amount", 0]]
+  ↳ app/models/sale.rb:14
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/sale.rb:14
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1[0m  [["id", 3]]
+  ↳ app/models/sale.rb:13
+  Rendering api/v1/sales/create.json.jbuilder
+  Rendered api/v1/sales/_sale.json.jbuilder (0.4ms)
+  Rendered api/v1/sales/create.json.jbuilder (1.6ms)
+Completed 200 OK in 82ms (Views: 2.5ms | ActiveRecord: 18.4ms)
+
+
+Started POST "/api/v1/sales" for ::1 at 2019-07-01 21:31:32 -0300
+Processing by Api::V1::SalesController#create as JSON
+  Parameters: {"address"=>"Rua Pouso Alegre", "number"=>"2486", "reference"=>"Perto da Praça", "cell_phone"=>"313512", "birthday_name"=>"Pedro Ferreira", "year"=>"12", "number_children"=>"20", "age_range"=>"10 a 15", "amount_adult"=>"15", "hour"=>"19:30", "date_event"=>"22/07/2019", "day_week"=>"Sexta-Feira", "date_final"=>"22/07/2019", "freight"=>"10,00", "days_collect"=>"1", "user_id"=>1, "products"=>"1,10||3,20", "sale"=>{"user_id"=>1, "address"=>"Rua Pouso Alegre", "number"=>"2486", "reference"=>"Perto da Praça", "cell_phone"=>"313512", "birthday_name"=>"Pedro Ferreira", "year"=>"12", "number_children"=>"20", "age_range"=>"10 a 15", "amount_adult"=>"15", "hour"=>"19:30", "date_event"=>"22/07/2019", "day_week"=>"Sexta-Feira", "date_final"=>"22/07/2019", "freight"=>"10,00", "days_collect"=>"1"}}
+Unpermitted parameters: :products, :format, :sale
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/sales_controller.rb:6
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/sales_controller.rb:6
+  [1m[36mSale Create (0.4ms)[0m  [1m[32mINSERT INTO "sales" ("user_id", "address", "number", "reference", "cell_phone", "birthday_name", "year", "number_children", "age_range", "amount_adult", "hour", "date_event", "day_week", "date_final", "freight", "days_collect", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18) RETURNING "id"[0m  [["user_id", 1], ["address", "Rua Pouso Alegre"], ["number", 2486], ["reference", "Perto da Praça"], ["cell_phone", "313512"], ["birthday_name", "Pedro Ferreira"], ["year", 12], ["number_children", 20], ["age_range", "10 a 15"], ["amount_adult", 15], ["hour", "19:30"], ["date_event", "2019-07-22"], ["day_week", "Sexta-Feira"], ["date_final", "2019-07-22"], ["freight", 10.0], ["days_collect", 1], ["created_at", "2019-07-02 00:31:32.888434"], ["updated_at", "2019-07-02 00:31:32.888434"]]
+  ↳ app/controllers/api/v1/sales_controller.rb:6
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/sales_controller.rb:6
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 ORDER BY "products"."id" DESC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/sale.rb:14
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/sale.rb:14
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/sale.rb:14
+  [1m[36mSaleProduct Create (0.6ms)[0m  [1m[32mINSERT INTO "sale_products" ("product_id", "sale_id", "created_at", "updated_at", "amount") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["product_id", 1], ["sale_id", 16], ["created_at", "2019-07-02 00:31:32.921874"], ["updated_at", "2019-07-02 00:31:32.921874"], ["amount", 0]]
+  ↳ app/models/sale.rb:14
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/sale.rb:14
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 ORDER BY "products"."id" DESC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/models/sale.rb:14
+Completed 500 Internal Server Error in 83ms (ActiveRecord: 15.9ms)
+
+
+  
+NoMethodError (undefined method `id' for nil:NilClass):
+  
+app/models/sale.rb:14:in `block in create_sale_product'
+app/models/sale.rb:11:in `each'
+app/models/sale.rb:11:in `create_sale_product'
+app/controllers/api/v1/sales_controller.rb:7:in `create'
+Started POST "/api/v1/sales" for ::1 at 2019-07-01 21:31:37 -0300
+Processing by Api::V1::SalesController#create as JSON
+  Parameters: {"address"=>"Rua Pouso Alegre", "number"=>"2486", "reference"=>"Perto da Praça", "cell_phone"=>"313512", "birthday_name"=>"Pedro Ferreira", "year"=>"12", "number_children"=>"20", "age_range"=>"10 a 15", "amount_adult"=>"15", "hour"=>"19:30", "date_event"=>"22/07/2019", "day_week"=>"Sexta-Feira", "date_final"=>"22/07/2019", "freight"=>"10,00", "days_collect"=>"1", "user_id"=>1, "products"=>"1,10||3,20", "sale"=>{"user_id"=>1, "address"=>"Rua Pouso Alegre", "number"=>"2486", "reference"=>"Perto da Praça", "cell_phone"=>"313512", "birthday_name"=>"Pedro Ferreira", "year"=>"12", "number_children"=>"20", "age_range"=>"10 a 15", "amount_adult"=>"15", "hour"=>"19:30", "date_event"=>"22/07/2019", "day_week"=>"Sexta-Feira", "date_final"=>"22/07/2019", "freight"=>"10,00", "days_collect"=>"1"}}
+Unpermitted parameters: :products, :format, :sale
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/sales_controller.rb:6
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/sales_controller.rb:6
+  [1m[36mSale Create (0.5ms)[0m  [1m[32mINSERT INTO "sales" ("user_id", "address", "number", "reference", "cell_phone", "birthday_name", "year", "number_children", "age_range", "amount_adult", "hour", "date_event", "day_week", "date_final", "freight", "days_collect", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18) RETURNING "id"[0m  [["user_id", 1], ["address", "Rua Pouso Alegre"], ["number", 2486], ["reference", "Perto da Praça"], ["cell_phone", "313512"], ["birthday_name", "Pedro Ferreira"], ["year", 12], ["number_children", 20], ["age_range", "10 a 15"], ["amount_adult", 15], ["hour", "19:30"], ["date_event", "2019-07-22"], ["day_week", "Sexta-Feira"], ["date_final", "2019-07-22"], ["freight", 10.0], ["days_collect", 1], ["created_at", "2019-07-02 00:31:37.789384"], ["updated_at", "2019-07-02 00:31:37.789384"]]
+  ↳ app/controllers/api/v1/sales_controller.rb:6
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/sales_controller.rb:6
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1[0m  [["id", 1]]
+  ↳ app/models/sale.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/sale.rb:14
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/sale.rb:14
+  [1m[36mSaleProduct Create (0.6ms)[0m  [1m[32mINSERT INTO "sale_products" ("product_id", "sale_id", "created_at", "updated_at", "amount") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["product_id", 1], ["sale_id", 17], ["created_at", "2019-07-02 00:31:37.824691"], ["updated_at", "2019-07-02 00:31:37.824691"], ["amount", 0]]
+  ↳ app/models/sale.rb:14
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/sale.rb:14
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1[0m  [["id", 3]]
+  ↳ app/models/sale.rb:13
+  Rendering api/v1/sales/create.json.jbuilder
+  Rendered api/v1/sales/_sale.json.jbuilder (0.5ms)
+  Rendered api/v1/sales/create.json.jbuilder (2.3ms)
+Completed 200 OK in 84ms (Views: 3.3ms | ActiveRecord: 17.2ms)
+
+
