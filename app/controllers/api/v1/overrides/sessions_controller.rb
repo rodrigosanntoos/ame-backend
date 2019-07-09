@@ -2,8 +2,7 @@ module Api::V1
     class Overrides::SessionsController < DeviseTokenAuth::SessionsController
 
         def create
-            byebug
-                super
+            super
         end
         
         private

@@ -1,5 +1,5 @@
 class Api::V1::ProductsController < Api::V1::BaseController
-    # before_action :authenticate_api_v1_admin!
+    before_action :authenticate_api_v1_admin!
     before_action :set_product, only: [:update, :destroy, :show]
 
     def create
@@ -13,9 +13,14 @@ class Api::V1::ProductsController < Api::V1::BaseController
         params[:page] ||= 1
         @products = Product.all.page(params[:page]).per(10)
     end
+
+    def index_app
+        @products = Product.all
+        render json: @products
+    end
     
     def update
-        if !@product.save!(product_params) 
+        if !@product.update!(product_params) 
             render json: @product.errors, status: :unprocessable_entity
         end
     end

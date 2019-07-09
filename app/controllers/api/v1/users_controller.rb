@@ -1,4 +1,5 @@
 class Api::V1::UsersController < ApplicationController
+    before_action :authenticate_api_v1_admin!
     before_action :set_user, only: [:update, :destroy, :show]
 
     def create
@@ -12,9 +13,14 @@ class Api::V1::UsersController < ApplicationController
         params[:page] ||= 1
         @users = User.all.page(params[:page]).per(10)
     end
+    
+    def index_sale
+        @users = User.all
+        render json: @users
+    end
 
     def update
-        if !@user.save!(user_params) 
+        if !@user.update!(user_params) 
             render json: @user.errors, status: :unprocessable_entity
         end
     end
