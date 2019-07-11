@@ -1,0 +1,75 @@
+# Logfile created on 2019-07-11 12:48:09 -0300 by logger.rb/56815
+  INFO ---------------------------------------------------------------------------
+  INFO START 2019-07-11 12:48:09 -0300 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [0fc35d1d] Running [ -d $HOME/.rbenv/versions/2.4.2 ] as ubuntu@52.205.254.190
+ DEBUG [0fc35d1d] Command: [ -d $HOME/.rbenv/versions/2.4.2 ]
+  INFO ---------------------------------------------------------------------------
+  INFO START 2019-07-11 12:48:44 -0300 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [c7e7a037] Running [ -d $HOME/.rbenv/versions/2.4.2 ] as ubuntu@52.205.254.190
+ DEBUG [c7e7a037] Command: [ -d $HOME/.rbenv/versions/2.4.2 ]
+  INFO ---------------------------------------------------------------------------
+  INFO START 2019-07-11 12:49:21 -0300 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [d4cfd732] Running [ -d $HOME/.rbenv/versions/2.4.2 ] as ubuntu@52.205.254.190
+ DEBUG [d4cfd732] Command: [ -d $HOME/.rbenv/versions/2.4.2 ]
+ DEBUG [863a57cc] Finished in 1.997 seconds with exit status 0 (successful).
+ DEBUG [39827ec7] Running /usr/bin/env which passenger as ubuntu@52.205.254.190
+ DEBUG [39827ec7] Command: /usr/bin/env which passenger
+ DEBUG [600b6c13] 	/usr/bin/passenger
+ DEBUG [600b6c13] Finished in 0.484 seconds with exit status 0 (successful).
+  INFO [085892fd] Running /usr/bin/env mkdir -p /tmp as ubuntu@52.205.254.190
+ DEBUG [085892fd] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.4.2" ; /usr/bin/env mkdir -p /tmp )
+  INFO [e1b07a86] Finished in 0.487 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-ame-backend-production-mateus.sh 0.0%
+  INFO Uploading /tmp/git-ssh-ame-backend-production-mateus.sh 100.0%
+  INFO [ae0dda5f] Running /usr/bin/env chmod 700 /tmp/git-ssh-ame-backend-production-mateus.sh as ubuntu@52.205.254.190
+ DEBUG [ae0dda5f] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.4.2" ; /usr/bin/env chmod 700 /tmp/git-ssh-ame-backend-production-mateus.sh )
+  INFO [60830050] Finished in 0.483 seconds with exit status 0 (successful).
+  INFO [ef251d56] Running /usr/bin/env git ls-remote https://github.com/mateeus700/ame-backend.git HEAD as ubuntu@52.205.254.190
+ DEBUG [ef251d56] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.4.2" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-ame-backend-production-mateus.sh" ; /usr/bin/env git ls-remote https://github.com/mateeus700/ame-backend.git HEAD )
+ DEBUG [429bbcf8] 	remote: Invalid username or password.
+ DEBUG [429bbcf8] 	f
+ DEBUG [429bbcf8] 	atal: 
+ DEBUG [429bbcf8] 	A
+ DEBUG [429bbcf8] 	uthentication failed for '
+ DEBUG [429bbcf8] 	h
+ DEBUG [429bbcf8] 	ttps://github.com/mateeus700/ame-backend.git/
+ DEBUG [429bbcf8] 	'
+ DEBUG [429bbcf8] 	
+  INFO ---------------------------------------------------------------------------
+  INFO START 2019-07-11 12:51:20 -0300 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [6808e925] Running [ -d $HOME/.rbenv/versions/2.4.2 ] as ubuntu@52.205.254.190
+ DEBUG [6808e925] Command: [ -d $HOME/.rbenv/versions/2.4.2 ]
+ DEBUG [030a6b1c] Finished in 1.926 seconds with exit status 0 (successful).
+ DEBUG [4ae6444d] Running /usr/bin/env which passenger as ubuntu@52.205.254.190
+ DEBUG [4ae6444d] Command: /usr/bin/env which passenger
+ DEBUG [f38c5477] 	/usr/bin/passenger
+ DEBUG [f38c5477] Finished in 0.474 seconds with exit status 0 (successful).
+  INFO [85913162] Running /usr/bin/env mkdir -p /tmp as ubuntu@52.205.254.190
+ DEBUG [85913162] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.4.2" ; /usr/bin/env mkdir -p /tmp )
+  INFO [4de6d60f] Finished in 0.474 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-ame-backend-production-mateus.sh 0.0%
+  INFO Uploading /tmp/git-ssh-ame-backend-production-mateus.sh 100.0%
+  INFO [5ed24d2f] Running /usr/bin/env chmod 700 /tmp/git-ssh-ame-backend-production-mateus.sh as ubuntu@52.205.254.190
+ DEBUG [5ed24d2f] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.4.2" ; /usr/bin/env chmod 700 /tmp/git-ssh-ame-backend-production-mateus.sh )
+  INFO [140eb4dd] Finished in 0.478 seconds with exit status 0 (successful).
+  INFO [60a06ed0] Running /usr/bin/env git ls-remote https://github.com/mateeus700/ame-backend.git HEAD as ubuntu@52.205.254.190
+ DEBUG [60a06ed0] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.4.2" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-ame-backend-production-mateus.sh" ; /usr/bin/env git ls-remote https://github.com/mateeus700/ame-backend.git HEAD )
+ DEBUG [bd321575] 	6eabfcefb5a8d49f7e4cd30362ae005c88718581	HEAD
+  INFO [bd321575] Finished in 0.624 seconds with exit status 0 (successful).
+  INFO [7f9daa27] Running /usr/bin/env mkdir -p /home/ubuntu/ame-backend/shared /home/ubuntu/ame-backend/releases as ubuntu@52.205.254.190
+ DEBUG [7f9daa27] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.4.2" ; /usr/bin/env mkdir -p /home/ubuntu/ame-backend/shared /home/ubuntu/ame-backend/releases )
+  INFO [62d4854c] Finished in 0.436 seconds with exit status 0 (successful).
+  INFO [f0048488] Running /usr/bin/env mkdir -p /home/ubuntu/ame-backend/shared/log /home/ubuntu/ame-backend/shared/tmp/pids /home/ubuntu/ame-backend/shared/tmp/cache /home/ubuntu/ame-backend/shared/tmp/sockets /home/ubuntu/ame-backend/shared/vendor/bundle /home/ubuntu/ame-backend/shared/public/system /home/ubuntu/ame-backend/shared/public/uploads /home/ubuntu/ame-backend/shared/public/assets as ubuntu@52.205.254.190
+ DEBUG [f0048488] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.4.2" ; /usr/bin/env mkdir -p /home/ubuntu/ame-backend/shared/log /home/ubuntu/ame-backend/shared/tmp/pids /home/ubuntu/ame-backend/shared/tmp/cache /home/ubuntu/ame-backend/shared/tmp/sockets /home/ubuntu/ame-backend/shared/vendor/bundle /home/ubuntu/ame-backend/shared/public/system /home/ubuntu/ame-backend/shared/public/uploads /home/ubuntu/ame-backend/shared/public/assets )
+  INFO [279f1e4e] Finished in 0.468 seconds with exit status 0 (successful).
+  INFO [4a99adbb] Running /usr/bin/env mkdir -p /home/ubuntu/ame-backend/shared/config as ubuntu@52.205.254.190
+ DEBUG [4a99adbb] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.4.2" ; /usr/bin/env mkdir -p /home/ubuntu/ame-backend/shared/config )
+  INFO [d2d62ad9] Finished in 0.472 seconds with exit status 0 (successful).
+ DEBUG [f1c8dd05] Running [ -f /home/ubuntu/ame-backend/shared/config/database.yml ] as ubuntu@52.205.254.190
+ DEBUG [f1c8dd05] Command: [ -f /home/ubuntu/ame-backend/shared/config/database.yml ]
+ DEBUG [a69dccdf] Finished in 0.473 seconds with exit status 1 (failed).
+ ERROR linked file /home/ubuntu/ame-backend/shared/config/database.yml does not exist on 52.205.254.190
