@@ -73,3 +73,400 @@
  DEBUG [f1c8dd05] Command: [ -f /home/ubuntu/ame-backend/shared/config/database.yml ]
  DEBUG [a69dccdf] Finished in 0.473 seconds with exit status 1 (failed).
  ERROR linked file /home/ubuntu/ame-backend/shared/config/database.yml does not exist on 52.205.254.190
+  INFO ---------------------------------------------------------------------------
+  INFO START 2019-07-11 13:11:22 -0300 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [d5e4d3f4] Running [ -d $HOME/.rbenv/versions/2.4.2 ] as ubuntu@52.205.254.190
+ DEBUG [d5e4d3f4] Command: [ -d $HOME/.rbenv/versions/2.4.2 ]
+ DEBUG [4c4bf093] Finished in 1.970 seconds with exit status 0 (successful).
+ DEBUG [3c2b093c] Running /usr/bin/env which passenger as ubuntu@52.205.254.190
+ DEBUG [3c2b093c] Command: /usr/bin/env which passenger
+ DEBUG [a46f940f] 	/usr/bin/passenger
+ DEBUG [a46f940f] Finished in 0.489 seconds with exit status 0 (successful).
+  INFO [9d6b905f] Running /usr/bin/env mkdir -p /tmp as ubuntu@52.205.254.190
+ DEBUG [9d6b905f] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.4.2" ; /usr/bin/env mkdir -p /tmp )
+  INFO [9235259a] Finished in 0.488 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-ame-backend-production-mateus.sh 0.0%
+  INFO Uploading /tmp/git-ssh-ame-backend-production-mateus.sh 100.0%
+  INFO [79d51853] Running /usr/bin/env chmod 700 /tmp/git-ssh-ame-backend-production-mateus.sh as ubuntu@52.205.254.190
+ DEBUG [79d51853] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.4.2" ; /usr/bin/env chmod 700 /tmp/git-ssh-ame-backend-production-mateus.sh )
+  INFO [b90a594c] Finished in 0.490 seconds with exit status 0 (successful).
+  INFO [023c320c] Running /usr/bin/env git ls-remote https://github.com/mateeus700/ame-backend.git HEAD as ubuntu@52.205.254.190
+ DEBUG [023c320c] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.4.2" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-ame-backend-production-mateus.sh" ; /usr/bin/env git ls-remote https://github.com/mateeus700/ame-backend.git HEAD )
+ DEBUG [73ad31d3] 	68470351f2b41bdc91454b6a41d70787a114eee6	HEAD
+  INFO [73ad31d3] Finished in 0.652 seconds with exit status 0 (successful).
+  INFO [5ca0e428] Running /usr/bin/env mkdir -p /home/ubuntu/ame-backend/shared /home/ubuntu/ame-backend/releases as ubuntu@52.205.254.190
+ DEBUG [5ca0e428] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.4.2" ; /usr/bin/env mkdir -p /home/ubuntu/ame-backend/shared /home/ubuntu/ame-backend/releases )
+  INFO [99d11d62] Finished in 0.489 seconds with exit status 0 (successful).
+  INFO [261f1930] Running /usr/bin/env mkdir -p /home/ubuntu/ame-backend/shared/log /home/ubuntu/ame-backend/shared/tmp/pids /home/ubuntu/ame-backend/shared/tmp/cache /home/ubuntu/ame-backend/shared/tmp/sockets /home/ubuntu/ame-backend/shared/vendor/bundle /home/ubuntu/ame-backend/shared/public/system /home/ubuntu/ame-backend/shared/public/uploads /home/ubuntu/ame-backend/shared/public/assets as ubuntu@52.205.254.190
+ DEBUG [261f1930] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.4.2" ; /usr/bin/env mkdir -p /home/ubuntu/ame-backend/shared/log /home/ubuntu/ame-backend/shared/tmp/pids /home/ubuntu/ame-backend/shared/tmp/cache /home/ubuntu/ame-backend/shared/tmp/sockets /home/ubuntu/ame-backend/shared/vendor/bundle /home/ubuntu/ame-backend/shared/public/system /home/ubuntu/ame-backend/shared/public/uploads /home/ubuntu/ame-backend/shared/public/assets )
+  INFO [246dda7b] Finished in 0.484 seconds with exit status 0 (successful).
+  INFO [338dd6d6] Running /usr/bin/env mkdir -p /home/ubuntu/ame-backend/shared/config as ubuntu@52.205.254.190
+ DEBUG [338dd6d6] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.4.2" ; /usr/bin/env mkdir -p /home/ubuntu/ame-backend/shared/config )
+  INFO [fbead571] Finished in 0.487 seconds with exit status 0 (successful).
+ DEBUG [768011dc] Running [ -f /home/ubuntu/ame-backend/shared/config/database.yml ] as ubuntu@52.205.254.190
+ DEBUG [768011dc] Command: [ -f /home/ubuntu/ame-backend/shared/config/database.yml ]
+ DEBUG [c32281d4] Finished in 0.484 seconds with exit status 1 (failed).
+ ERROR linked file /home/ubuntu/ame-backend/shared/config/database.yml does not exist on 52.205.254.190
+  INFO ---------------------------------------------------------------------------
+  INFO START 2019-07-11 13:12:45 -0300 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [ae2fec1c] Running [ -d $HOME/.rbenv/versions/2.4.2 ] as ubuntu@52.205.254.190
+ DEBUG [ae2fec1c] Command: [ -d $HOME/.rbenv/versions/2.4.2 ]
+ DEBUG [16bb2081] Finished in 1.934 seconds with exit status 0 (successful).
+ DEBUG [beed227e] Running /usr/bin/env which passenger as ubuntu@52.205.254.190
+ DEBUG [beed227e] Command: /usr/bin/env which passenger
+ DEBUG [19a97004] 	/usr/bin/passenger
+ DEBUG [19a97004] Finished in 0.495 seconds with exit status 0 (successful).
+  INFO [0a88cdff] Running /usr/bin/env mkdir -p /tmp as ubuntu@52.205.254.190
+ DEBUG [0a88cdff] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.4.2" ; /usr/bin/env mkdir -p /tmp )
+  INFO [d0bb870a] Finished in 0.521 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-ame-backend-production-mateus.sh 0.0%
+  INFO Uploading /tmp/git-ssh-ame-backend-production-mateus.sh 100.0%
+  INFO [f0df6f19] Running /usr/bin/env chmod 700 /tmp/git-ssh-ame-backend-production-mateus.sh as ubuntu@52.205.254.190
+ DEBUG [f0df6f19] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.4.2" ; /usr/bin/env chmod 700 /tmp/git-ssh-ame-backend-production-mateus.sh )
+  INFO [1490564a] Finished in 0.511 seconds with exit status 0 (successful).
+  INFO [56df5540] Running /usr/bin/env git ls-remote https://github.com/mateeus700/ame-backend.git HEAD as ubuntu@52.205.254.190
+ DEBUG [56df5540] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.4.2" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-ame-backend-production-mateus.sh" ; /usr/bin/env git ls-remote https://github.com/mateeus700/ame-backend.git HEAD )
+ DEBUG [62a674c3] 	68470351f2b41bdc91454b6a41d70787a114eee6	HEAD
+  INFO [62a674c3] Finished in 0.643 seconds with exit status 0 (successful).
+  INFO [2b9bf20b] Running /usr/bin/env mkdir -p /home/ubuntu/ame-backend/shared /home/ubuntu/ame-backend/releases as ubuntu@52.205.254.190
+ DEBUG [2b9bf20b] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.4.2" ; /usr/bin/env mkdir -p /home/ubuntu/ame-backend/shared /home/ubuntu/ame-backend/releases )
+  INFO [f730ff78] Finished in 0.493 seconds with exit status 0 (successful).
+  INFO [44d23080] Running /usr/bin/env mkdir -p /home/ubuntu/ame-backend/shared/log /home/ubuntu/ame-backend/shared/tmp/pids /home/ubuntu/ame-backend/shared/tmp/cache /home/ubuntu/ame-backend/shared/tmp/sockets /home/ubuntu/ame-backend/shared/vendor/bundle /home/ubuntu/ame-backend/shared/public/system /home/ubuntu/ame-backend/shared/public/uploads /home/ubuntu/ame-backend/shared/public/assets as ubuntu@52.205.254.190
+ DEBUG [44d23080] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.4.2" ; /usr/bin/env mkdir -p /home/ubuntu/ame-backend/shared/log /home/ubuntu/ame-backend/shared/tmp/pids /home/ubuntu/ame-backend/shared/tmp/cache /home/ubuntu/ame-backend/shared/tmp/sockets /home/ubuntu/ame-backend/shared/vendor/bundle /home/ubuntu/ame-backend/shared/public/system /home/ubuntu/ame-backend/shared/public/uploads /home/ubuntu/ame-backend/shared/public/assets )
+  INFO [000be47c] Finished in 0.493 seconds with exit status 0 (successful).
+  INFO [ff02d4a2] Running /usr/bin/env mkdir -p /home/ubuntu/ame-backend/shared/config as ubuntu@52.205.254.190
+ DEBUG [ff02d4a2] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.4.2" ; /usr/bin/env mkdir -p /home/ubuntu/ame-backend/shared/config )
+  INFO [dd91280c] Finished in 0.496 seconds with exit status 0 (successful).
+ DEBUG [34c9fef4] Running [ -f /home/ubuntu/ame-backend/shared/config/database.yml ] as ubuntu@52.205.254.190
+ DEBUG [34c9fef4] Command: [ -f /home/ubuntu/ame-backend/shared/config/database.yml ]
+ DEBUG [de311f10] Finished in 0.496 seconds with exit status 0 (successful).
+ DEBUG [04222bf6] Running [ -f /home/ubuntu/ame-backend/shared/config/secrets.yml ] as ubuntu@52.205.254.190
+ DEBUG [04222bf6] Command: [ -f /home/ubuntu/ame-backend/shared/config/secrets.yml ]
+ DEBUG [ddf5a5b8] Finished in 0.456 seconds with exit status 1 (failed).
+ ERROR linked file /home/ubuntu/ame-backend/shared/config/secrets.yml does not exist on 52.205.254.190
+  INFO ---------------------------------------------------------------------------
+  INFO START 2019-07-11 13:13:46 -0300 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [aef474bd] Running [ -d $HOME/.rbenv/versions/2.4.2 ] as ubuntu@52.205.254.190
+ DEBUG [aef474bd] Command: [ -d $HOME/.rbenv/versions/2.4.2 ]
+ DEBUG [a06765f2] Finished in 1.859 seconds with exit status 0 (successful).
+ DEBUG [115befcc] Running /usr/bin/env which passenger as ubuntu@52.205.254.190
+ DEBUG [115befcc] Command: /usr/bin/env which passenger
+ DEBUG [b4ab11ef] 	/usr/bin/passenger
+ DEBUG [b4ab11ef] Finished in 0.474 seconds with exit status 0 (successful).
+  INFO [1d129457] Running /usr/bin/env mkdir -p /tmp as ubuntu@52.205.254.190
+ DEBUG [1d129457] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.4.2" ; /usr/bin/env mkdir -p /tmp )
+  INFO [59b8f066] Finished in 0.435 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-ame-backend-production-mateus.sh 0.0%
+  INFO Uploading /tmp/git-ssh-ame-backend-production-mateus.sh 100.0%
+  INFO [dee44f00] Running /usr/bin/env chmod 700 /tmp/git-ssh-ame-backend-production-mateus.sh as ubuntu@52.205.254.190
+ DEBUG [dee44f00] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.4.2" ; /usr/bin/env chmod 700 /tmp/git-ssh-ame-backend-production-mateus.sh )
+  INFO [9595aabf] Finished in 0.440 seconds with exit status 0 (successful).
+  INFO [30d28a06] Running /usr/bin/env git ls-remote https://github.com/mateeus700/ame-backend.git HEAD as ubuntu@52.205.254.190
+ DEBUG [30d28a06] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.4.2" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-ame-backend-production-mateus.sh" ; /usr/bin/env git ls-remote https://github.com/mateeus700/ame-backend.git HEAD )
+ DEBUG [4ec063f8] 	68470351f2b41bdc91454b6a41d70787a114eee6	HEAD
+  INFO [4ec063f8] Finished in 0.645 seconds with exit status 0 (successful).
+  INFO [23b6f4ba] Running /usr/bin/env mkdir -p /home/ubuntu/ame-backend/shared /home/ubuntu/ame-backend/releases as ubuntu@52.205.254.190
+ DEBUG [23b6f4ba] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.4.2" ; /usr/bin/env mkdir -p /home/ubuntu/ame-backend/shared /home/ubuntu/ame-backend/releases )
+  INFO [200d9aa6] Finished in 0.481 seconds with exit status 0 (successful).
+  INFO [32cb0343] Running /usr/bin/env mkdir -p /home/ubuntu/ame-backend/shared/log /home/ubuntu/ame-backend/shared/tmp/pids /home/ubuntu/ame-backend/shared/tmp/cache /home/ubuntu/ame-backend/shared/tmp/sockets /home/ubuntu/ame-backend/shared/vendor/bundle /home/ubuntu/ame-backend/shared/public/system /home/ubuntu/ame-backend/shared/public/uploads /home/ubuntu/ame-backend/shared/public/assets as ubuntu@52.205.254.190
+ DEBUG [32cb0343] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.4.2" ; /usr/bin/env mkdir -p /home/ubuntu/ame-backend/shared/log /home/ubuntu/ame-backend/shared/tmp/pids /home/ubuntu/ame-backend/shared/tmp/cache /home/ubuntu/ame-backend/shared/tmp/sockets /home/ubuntu/ame-backend/shared/vendor/bundle /home/ubuntu/ame-backend/shared/public/system /home/ubuntu/ame-backend/shared/public/uploads /home/ubuntu/ame-backend/shared/public/assets )
+  INFO [b2b46ac4] Finished in 0.472 seconds with exit status 0 (successful).
+  INFO [6c8f5cd2] Running /usr/bin/env mkdir -p /home/ubuntu/ame-backend/shared/config as ubuntu@52.205.254.190
+ DEBUG [6c8f5cd2] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.4.2" ; /usr/bin/env mkdir -p /home/ubuntu/ame-backend/shared/config )
+  INFO [a8c181c0] Finished in 0.476 seconds with exit status 0 (successful).
+ DEBUG [22ce6276] Running [ -f /home/ubuntu/ame-backend/shared/config/database.yml ] as ubuntu@52.205.254.190
+ DEBUG [22ce6276] Command: [ -f /home/ubuntu/ame-backend/shared/config/database.yml ]
+ DEBUG [718df26f] Finished in 0.478 seconds with exit status 0 (successful).
+ DEBUG [e335950c] Running [ -f /home/ubuntu/ame-backend/shared/config/secrets.yml ] as ubuntu@52.205.254.190
+ DEBUG [e335950c] Command: [ -f /home/ubuntu/ame-backend/shared/config/secrets.yml ]
+ DEBUG [a02296fd] Finished in 0.477 seconds with exit status 0 (successful).
+ DEBUG [432d4f34] Running [ -f /home/ubuntu/ame-backend/current/REVISION ] as ubuntu@52.205.254.190
+ DEBUG [432d4f34] Command: [ -f /home/ubuntu/ame-backend/current/REVISION ]
+ DEBUG [9464712e] Finished in 0.475 seconds with exit status 1 (failed).
+ DEBUG [f231ca6b] Running [ -f /home/ubuntu/ame-backend/repo/HEAD ] as ubuntu@52.205.254.190
+ DEBUG [f231ca6b] Command: [ -f /home/ubuntu/ame-backend/repo/HEAD ]
+ DEBUG [328f9a46] Finished in 0.475 seconds with exit status 1 (failed).
+ DEBUG [f53cbc50] Running if test ! -d /home/ubuntu/ame-backend; then echo "Directory does not exist '/home/ubuntu/ame-backend'" 1>&2; false; fi as ubuntu@52.205.254.190
+ DEBUG [f53cbc50] Command: if test ! -d /home/ubuntu/ame-backend; then echo "Directory does not exist '/home/ubuntu/ame-backend'" 1>&2; false; fi
+ DEBUG [50f50de1] Finished in 0.473 seconds with exit status 0 (successful).
+  INFO [bff76ca9] Running /usr/bin/env git clone --mirror https://github.com/mateeus700/ame-backend.git /home/ubuntu/ame-backend/repo as ubuntu@52.205.254.190
+ DEBUG [bff76ca9] Command: cd /home/ubuntu/ame-backend && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.4.2" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-ame-backend-production-mateus.sh" ; /usr/bin/env git clone --mirror https://github.com/mateeus700/ame-backend.git /home/ubuntu/ame-backend/repo )
+ DEBUG [61071b58] 	Cloning into bare repository '/home/ubuntu/ame-backend/repo'...
+  INFO [61071b58] Finished in 0.733 seconds with exit status 0 (successful).
+ DEBUG [92417a9b] Running if test ! -d /home/ubuntu/ame-backend/repo; then echo "Directory does not exist '/home/ubuntu/ame-backend/repo'" 1>&2; false; fi as ubuntu@52.205.254.190
+ DEBUG [92417a9b] Command: if test ! -d /home/ubuntu/ame-backend/repo; then echo "Directory does not exist '/home/ubuntu/ame-backend/repo'" 1>&2; false; fi
+ DEBUG [4ee2d703] Finished in 0.471 seconds with exit status 0 (successful).
+  INFO [ca53b7ad] Running /usr/bin/env git remote set-url origin https://github.com/mateeus700/ame-backend.git as ubuntu@52.205.254.190
+ DEBUG [ca53b7ad] Command: cd /home/ubuntu/ame-backend/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.4.2" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-ame-backend-production-mateus.sh" ; /usr/bin/env git remote set-url origin https://github.com/mateeus700/ame-backend.git )
+  INFO [3f8f386a] Finished in 0.438 seconds with exit status 0 (successful).
+  INFO [1840ab85] Running /usr/bin/env git remote update --prune as ubuntu@52.205.254.190
+ DEBUG [1840ab85] Command: cd /home/ubuntu/ame-backend/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.4.2" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-ame-backend-production-mateus.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [7b7391be] 	Fetching origin
+  INFO [7b7391be] Finished in 0.628 seconds with exit status 0 (successful).
+ DEBUG [f43eec29] Running if test ! -d /home/ubuntu/ame-backend/repo; then echo "Directory does not exist '/home/ubuntu/ame-backend/repo'" 1>&2; false; fi as ubuntu@52.205.254.190
+ DEBUG [f43eec29] Command: if test ! -d /home/ubuntu/ame-backend/repo; then echo "Directory does not exist '/home/ubuntu/ame-backend/repo'" 1>&2; false; fi
+ DEBUG [39ae264a] Finished in 0.473 seconds with exit status 0 (successful).
+  INFO [cb7878d6] Running /usr/bin/env mkdir -p /home/ubuntu/ame-backend/releases/20190711161354 as ubuntu@52.205.254.190
+ DEBUG [cb7878d6] Command: cd /home/ubuntu/ame-backend/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.4.2" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-ame-backend-production-mateus.sh" ; /usr/bin/env mkdir -p /home/ubuntu/ame-backend/releases/20190711161354 )
+  INFO [a2e9580a] Finished in 0.473 seconds with exit status 0 (successful).
+  INFO [9892d1a1] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/ubuntu/ame-backend/releases/20190711161354 as ubuntu@52.205.254.190
+ DEBUG [9892d1a1] Command: cd /home/ubuntu/ame-backend/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.4.2" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-ame-backend-production-mateus.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/ubuntu/ame-backend/releases/20190711161354 )
+  INFO [b589497a] Finished in 0.496 seconds with exit status 0 (successful).
+ DEBUG [b6f2401e] Running if test ! -d /home/ubuntu/ame-backend/repo; then echo "Directory does not exist '/home/ubuntu/ame-backend/repo'" 1>&2; false; fi as ubuntu@52.205.254.190
+ DEBUG [b6f2401e] Command: if test ! -d /home/ubuntu/ame-backend/repo; then echo "Directory does not exist '/home/ubuntu/ame-backend/repo'" 1>&2; false; fi
+ DEBUG [77ba51cd] Finished in 0.505 seconds with exit status 0 (successful).
+ DEBUG [a57888b5] Running /usr/bin/env git rev-list --max-count=1 master as ubuntu@52.205.254.190
+ DEBUG [a57888b5] Command: cd /home/ubuntu/ame-backend/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.4.2" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-ame-backend-production-mateus.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [3300fe4c] 	68470351f2b41bdc91454b6a41d70787a114eee6
+ DEBUG [3300fe4c] Finished in 0.506 seconds with exit status 0 (successful).
+ DEBUG [407ac609] Running if test ! -d /home/ubuntu/ame-backend/releases/20190711161354; then echo "Directory does not exist '/home/ubuntu/ame-backend/releases/20190711161354'" 1>&2; false; fi as ubuntu@52.205.254.190
+ DEBUG [407ac609] Command: if test ! -d /home/ubuntu/ame-backend/releases/20190711161354; then echo "Directory does not exist '/home/ubuntu/ame-backend/releases/20190711161354'" 1>&2; false; fi
+ DEBUG [3d3a67d3] Finished in 0.494 seconds with exit status 0 (successful).
+  INFO [3eb589d1] Running /usr/bin/env echo "68470351f2b41bdc91454b6a41d70787a114eee6" > REVISION as ubuntu@52.205.254.190
+ DEBUG [3eb589d1] Command: cd /home/ubuntu/ame-backend/releases/20190711161354 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.4.2" ; /usr/bin/env echo "68470351f2b41bdc91454b6a41d70787a114eee6" > REVISION )
+  INFO [063e7ac4] Finished in 0.476 seconds with exit status 0 (successful).
+  INFO [2bdb27fc] Running /usr/bin/env mkdir -p /home/ubuntu/ame-backend/releases/20190711161354/config as ubuntu@52.205.254.190
+ DEBUG [2bdb27fc] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.4.2" ; /usr/bin/env mkdir -p /home/ubuntu/ame-backend/releases/20190711161354/config )
+  INFO [497e9789] Finished in 0.472 seconds with exit status 0 (successful).
+ DEBUG [58113d6b] Running [ -L /home/ubuntu/ame-backend/releases/20190711161354/config/database.yml ] as ubuntu@52.205.254.190
+ DEBUG [58113d6b] Command: [ -L /home/ubuntu/ame-backend/releases/20190711161354/config/database.yml ]
+ DEBUG [bcec81d7] Finished in 0.478 seconds with exit status 1 (failed).
+ DEBUG [dc988e5e] Running [ -f /home/ubuntu/ame-backend/releases/20190711161354/config/database.yml ] as ubuntu@52.205.254.190
+ DEBUG [dc988e5e] Command: [ -f /home/ubuntu/ame-backend/releases/20190711161354/config/database.yml ]
+ DEBUG [193b93a5] Finished in 0.475 seconds with exit status 0 (successful).
+  INFO [57fc718f] Running /usr/bin/env rm /home/ubuntu/ame-backend/releases/20190711161354/config/database.yml as ubuntu@52.205.254.190
+ DEBUG [57fc718f] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.4.2" ; /usr/bin/env rm /home/ubuntu/ame-backend/releases/20190711161354/config/database.yml )
+  INFO [2cd061b3] Finished in 0.480 seconds with exit status 0 (successful).
+  INFO [ca3b5632] Running /usr/bin/env ln -s /home/ubuntu/ame-backend/shared/config/database.yml /home/ubuntu/ame-backend/releases/20190711161354/config/database.yml as ubuntu@52.205.254.190
+ DEBUG [ca3b5632] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.4.2" ; /usr/bin/env ln -s /home/ubuntu/ame-backend/shared/config/database.yml /home/ubuntu/ame-backend/releases/20190711161354/config/database.yml )
+  INFO [bdaa9c0e] Finished in 0.474 seconds with exit status 0 (successful).
+ DEBUG [9f144cab] Running [ -L /home/ubuntu/ame-backend/releases/20190711161354/config/secrets.yml ] as ubuntu@52.205.254.190
+ DEBUG [9f144cab] Command: [ -L /home/ubuntu/ame-backend/releases/20190711161354/config/secrets.yml ]
+ DEBUG [3407dc58] Finished in 0.473 seconds with exit status 1 (failed).
+ DEBUG [bf393989] Running [ -f /home/ubuntu/ame-backend/releases/20190711161354/config/secrets.yml ] as ubuntu@52.205.254.190
+ DEBUG [bf393989] Command: [ -f /home/ubuntu/ame-backend/releases/20190711161354/config/secrets.yml ]
+ DEBUG [43796c5c] Finished in 0.476 seconds with exit status 1 (failed).
+  INFO [f15d2714] Running /usr/bin/env ln -s /home/ubuntu/ame-backend/shared/config/secrets.yml /home/ubuntu/ame-backend/releases/20190711161354/config/secrets.yml as ubuntu@52.205.254.190
+ DEBUG [f15d2714] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.4.2" ; /usr/bin/env ln -s /home/ubuntu/ame-backend/shared/config/secrets.yml /home/ubuntu/ame-backend/releases/20190711161354/config/secrets.yml )
+  INFO [218268b8] Finished in 0.476 seconds with exit status 0 (successful).
+  INFO [9ad4c5d2] Running /usr/bin/env mkdir -p /home/ubuntu/ame-backend/releases/20190711161354 /home/ubuntu/ame-backend/releases/20190711161354/tmp /home/ubuntu/ame-backend/releases/20190711161354/vendor /home/ubuntu/ame-backend/releases/20190711161354/public as ubuntu@52.205.254.190
+ DEBUG [9ad4c5d2] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.4.2" ; /usr/bin/env mkdir -p /home/ubuntu/ame-backend/releases/20190711161354 /home/ubuntu/ame-backend/releases/20190711161354/tmp /home/ubuntu/ame-backend/releases/20190711161354/vendor /home/ubuntu/ame-backend/releases/20190711161354/public )
+  INFO [503bde81] Finished in 0.470 seconds with exit status 0 (successful).
+ DEBUG [2603a78c] Running [ -L /home/ubuntu/ame-backend/releases/20190711161354/log ] as ubuntu@52.205.254.190
+ DEBUG [2603a78c] Command: [ -L /home/ubuntu/ame-backend/releases/20190711161354/log ]
+ DEBUG [2a4043eb] Finished in 0.475 seconds with exit status 1 (failed).
+ DEBUG [897351d4] Running [ -d /home/ubuntu/ame-backend/releases/20190711161354/log ] as ubuntu@52.205.254.190
+ DEBUG [897351d4] Command: [ -d /home/ubuntu/ame-backend/releases/20190711161354/log ]
+ DEBUG [6035c65f] Finished in 0.475 seconds with exit status 0 (successful).
+  INFO [b346c17e] Running /usr/bin/env rm -rf /home/ubuntu/ame-backend/releases/20190711161354/log as ubuntu@52.205.254.190
+ DEBUG [b346c17e] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.4.2" ; /usr/bin/env rm -rf /home/ubuntu/ame-backend/releases/20190711161354/log )
+  INFO [a769ca71] Finished in 0.476 seconds with exit status 0 (successful).
+  INFO [c56b933b] Running /usr/bin/env ln -s /home/ubuntu/ame-backend/shared/log /home/ubuntu/ame-backend/releases/20190711161354/log as ubuntu@52.205.254.190
+ DEBUG [c56b933b] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.4.2" ; /usr/bin/env ln -s /home/ubuntu/ame-backend/shared/log /home/ubuntu/ame-backend/releases/20190711161354/log )
+  INFO [21f2d057] Finished in 0.472 seconds with exit status 0 (successful).
+ DEBUG [ffbbd757] Running [ -L /home/ubuntu/ame-backend/releases/20190711161354/tmp/pids ] as ubuntu@52.205.254.190
+ DEBUG [ffbbd757] Command: [ -L /home/ubuntu/ame-backend/releases/20190711161354/tmp/pids ]
+ DEBUG [1076551e] Finished in 0.471 seconds with exit status 1 (failed).
+ DEBUG [03947606] Running [ -d /home/ubuntu/ame-backend/releases/20190711161354/tmp/pids ] as ubuntu@52.205.254.190
+ DEBUG [03947606] Command: [ -d /home/ubuntu/ame-backend/releases/20190711161354/tmp/pids ]
+ DEBUG [48e2e11f] Finished in 0.479 seconds with exit status 1 (failed).
+  INFO [790efd65] Running /usr/bin/env ln -s /home/ubuntu/ame-backend/shared/tmp/pids /home/ubuntu/ame-backend/releases/20190711161354/tmp/pids as ubuntu@52.205.254.190
+ DEBUG [790efd65] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.4.2" ; /usr/bin/env ln -s /home/ubuntu/ame-backend/shared/tmp/pids /home/ubuntu/ame-backend/releases/20190711161354/tmp/pids )
+  INFO [439f4f23] Finished in 0.474 seconds with exit status 0 (successful).
+ DEBUG [c4d594bd] Running [ -L /home/ubuntu/ame-backend/releases/20190711161354/tmp/cache ] as ubuntu@52.205.254.190
+ DEBUG [c4d594bd] Command: [ -L /home/ubuntu/ame-backend/releases/20190711161354/tmp/cache ]
+ DEBUG [3b03ce70] Finished in 0.473 seconds with exit status 1 (failed).
+ DEBUG [15d65ef3] Running [ -d /home/ubuntu/ame-backend/releases/20190711161354/tmp/cache ] as ubuntu@52.205.254.190
+ DEBUG [15d65ef3] Command: [ -d /home/ubuntu/ame-backend/releases/20190711161354/tmp/cache ]
+ DEBUG [41992a2c] Finished in 0.437 seconds with exit status 1 (failed).
+  INFO [56e83acf] Running /usr/bin/env ln -s /home/ubuntu/ame-backend/shared/tmp/cache /home/ubuntu/ame-backend/releases/20190711161354/tmp/cache as ubuntu@52.205.254.190
+ DEBUG [56e83acf] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.4.2" ; /usr/bin/env ln -s /home/ubuntu/ame-backend/shared/tmp/cache /home/ubuntu/ame-backend/releases/20190711161354/tmp/cache )
+  INFO [82535da8] Finished in 0.477 seconds with exit status 0 (successful).
+ DEBUG [9dc30454] Running [ -L /home/ubuntu/ame-backend/releases/20190711161354/tmp/sockets ] as ubuntu@52.205.254.190
+ DEBUG [9dc30454] Command: [ -L /home/ubuntu/ame-backend/releases/20190711161354/tmp/sockets ]
+ DEBUG [f37256eb] Finished in 0.511 seconds with exit status 1 (failed).
+ DEBUG [69003fab] Running [ -d /home/ubuntu/ame-backend/releases/20190711161354/tmp/sockets ] as ubuntu@52.205.254.190
+ DEBUG [69003fab] Command: [ -d /home/ubuntu/ame-backend/releases/20190711161354/tmp/sockets ]
+ DEBUG [a9eb5a43] Finished in 0.517 seconds with exit status 1 (failed).
+  INFO [bf2490b4] Running /usr/bin/env ln -s /home/ubuntu/ame-backend/shared/tmp/sockets /home/ubuntu/ame-backend/releases/20190711161354/tmp/sockets as ubuntu@52.205.254.190
+ DEBUG [bf2490b4] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.4.2" ; /usr/bin/env ln -s /home/ubuntu/ame-backend/shared/tmp/sockets /home/ubuntu/ame-backend/releases/20190711161354/tmp/sockets )
+  INFO [491de83d] Finished in 0.476 seconds with exit status 0 (successful).
+ DEBUG [0e6e3c96] Running [ -L /home/ubuntu/ame-backend/releases/20190711161354/vendor/bundle ] as ubuntu@52.205.254.190
+ DEBUG [0e6e3c96] Command: [ -L /home/ubuntu/ame-backend/releases/20190711161354/vendor/bundle ]
+ DEBUG [21684e97] Finished in 0.472 seconds with exit status 1 (failed).
+ DEBUG [c01aa4ba] Running [ -d /home/ubuntu/ame-backend/releases/20190711161354/vendor/bundle ] as ubuntu@52.205.254.190
+ DEBUG [c01aa4ba] Command: [ -d /home/ubuntu/ame-backend/releases/20190711161354/vendor/bundle ]
+ DEBUG [447a725e] Finished in 0.475 seconds with exit status 1 (failed).
+  INFO [6b81befb] Running /usr/bin/env ln -s /home/ubuntu/ame-backend/shared/vendor/bundle /home/ubuntu/ame-backend/releases/20190711161354/vendor/bundle as ubuntu@52.205.254.190
+ DEBUG [6b81befb] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.4.2" ; /usr/bin/env ln -s /home/ubuntu/ame-backend/shared/vendor/bundle /home/ubuntu/ame-backend/releases/20190711161354/vendor/bundle )
+  INFO [4213a3eb] Finished in 0.473 seconds with exit status 0 (successful).
+ DEBUG [d3db6abc] Running [ -L /home/ubuntu/ame-backend/releases/20190711161354/public/system ] as ubuntu@52.205.254.190
+ DEBUG [d3db6abc] Command: [ -L /home/ubuntu/ame-backend/releases/20190711161354/public/system ]
+ DEBUG [250f8442] Finished in 0.476 seconds with exit status 1 (failed).
+ DEBUG [ce3bdc30] Running [ -d /home/ubuntu/ame-backend/releases/20190711161354/public/system ] as ubuntu@52.205.254.190
+ DEBUG [ce3bdc30] Command: [ -d /home/ubuntu/ame-backend/releases/20190711161354/public/system ]
+ DEBUG [1b145883] Finished in 0.473 seconds with exit status 1 (failed).
+  INFO [ca54dada] Running /usr/bin/env ln -s /home/ubuntu/ame-backend/shared/public/system /home/ubuntu/ame-backend/releases/20190711161354/public/system as ubuntu@52.205.254.190
+ DEBUG [ca54dada] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.4.2" ; /usr/bin/env ln -s /home/ubuntu/ame-backend/shared/public/system /home/ubuntu/ame-backend/releases/20190711161354/public/system )
+  INFO [2a453ea5] Finished in 0.478 seconds with exit status 0 (successful).
+ DEBUG [6c39a62a] Running [ -L /home/ubuntu/ame-backend/releases/20190711161354/public/uploads ] as ubuntu@52.205.254.190
+ DEBUG [6c39a62a] Command: [ -L /home/ubuntu/ame-backend/releases/20190711161354/public/uploads ]
+ DEBUG [9f4deb5d] Finished in 0.475 seconds with exit status 1 (failed).
+ DEBUG [51d98072] Running [ -d /home/ubuntu/ame-backend/releases/20190711161354/public/uploads ] as ubuntu@52.205.254.190
+ DEBUG [51d98072] Command: [ -d /home/ubuntu/ame-backend/releases/20190711161354/public/uploads ]
+ DEBUG [537d4a37] Finished in 0.476 seconds with exit status 1 (failed).
+  INFO [031f71fe] Running /usr/bin/env ln -s /home/ubuntu/ame-backend/shared/public/uploads /home/ubuntu/ame-backend/releases/20190711161354/public/uploads as ubuntu@52.205.254.190
+ DEBUG [031f71fe] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.4.2" ; /usr/bin/env ln -s /home/ubuntu/ame-backend/shared/public/uploads /home/ubuntu/ame-backend/releases/20190711161354/public/uploads )
+  INFO [29ff93bd] Finished in 0.473 seconds with exit status 0 (successful).
+ DEBUG [729eb60c] Running [ -L /home/ubuntu/ame-backend/releases/20190711161354/public/assets ] as ubuntu@52.205.254.190
+ DEBUG [729eb60c] Command: [ -L /home/ubuntu/ame-backend/releases/20190711161354/public/assets ]
+ DEBUG [3c40e592] Finished in 0.482 seconds with exit status 1 (failed).
+ DEBUG [5980b032] Running [ -d /home/ubuntu/ame-backend/releases/20190711161354/public/assets ] as ubuntu@52.205.254.190
+ DEBUG [5980b032] Command: [ -d /home/ubuntu/ame-backend/releases/20190711161354/public/assets ]
+ DEBUG [e8341e60] Finished in 0.473 seconds with exit status 1 (failed).
+  INFO [3876de96] Running /usr/bin/env ln -s /home/ubuntu/ame-backend/shared/public/assets /home/ubuntu/ame-backend/releases/20190711161354/public/assets as ubuntu@52.205.254.190
+ DEBUG [3876de96] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.4.2" ; /usr/bin/env ln -s /home/ubuntu/ame-backend/shared/public/assets /home/ubuntu/ame-backend/releases/20190711161354/public/assets )
+  INFO [b3b9fe0c] Finished in 0.476 seconds with exit status 0 (successful).
+ DEBUG [1fdabc07] Running if test ! -d /home/ubuntu/ame-backend/releases/20190711161354; then echo "Directory does not exist '/home/ubuntu/ame-backend/releases/20190711161354'" 1>&2; false; fi as ubuntu@52.205.254.190
+ DEBUG [1fdabc07] Command: if test ! -d /home/ubuntu/ame-backend/releases/20190711161354; then echo "Directory does not exist '/home/ubuntu/ame-backend/releases/20190711161354'" 1>&2; false; fi
+ DEBUG [1a8ba21d] Finished in 0.472 seconds with exit status 0 (successful).
+ DEBUG [7812d7a0] Running $HOME/.rbenv/bin/rbenv exec bundle check --path /home/ubuntu/ame-backend/shared/bundle as ubuntu@52.205.254.190
+ DEBUG [7812d7a0] Command: cd /home/ubuntu/ame-backend/releases/20190711161354 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.4.2" ; $HOME/.rbenv/bin/rbenv exec bundle check --path /home/ubuntu/ame-backend/shared/bundle )
+ DEBUG [fb6f615d] 	Your Gemfile lists the gem delayed_job_active_record (>= 0) more than once.
+You should probably keep only one of them.
+Remove any duplicate entries and specify the gem only once (per group).
+While it's not a problem now, it could cause errors if you change the version of one of them later.
+ DEBUG [fb6f615d] 	The dependency tzinfo-data (>= 0) will be unused by any of the platforms Bundler is installing for. Bundler is installing for ruby but the dependency is only for x86-mingw32, x86-mswin32, x64-mingw32, java. To add those platforms to the bundle, run `bundle lock --add-platform x86-mingw32 x86-mswin32 x64-mingw32 java`.
+ DEBUG [fb6f615d] 	The following gems are missing
+ DEBUG [fb6f615d] 	 * rake (12.3.2)
+ DEBUG [fb6f615d] 	 * concurrent-ruby (1.1.5)
+ DEBUG [fb6f615d] 	 * i18n (1.6.0)
+ DEBUG [fb6f615d] 	 * minitest (5.11.3)
+ DEBUG [fb6f615d] 	 * thread_safe (0.3.6)
+ DEBUG [fb6f615d] 	 * tzinfo (1.2.5)
+ DEBUG [fb6f615d] 	 * activesupport (5.2.3)
+ DEBUG [fb6f615d] 	 * builder (3.2.3)
+ DEBUG [fb6f615d] 	 * erubi (1.8.0)
+ DEBUG [fb6f615d] 	 * mini_portile2 (2.4.0)
+ DEBUG [fb6f615d] 	 * nokogiri (1.10.3)
+ DEBUG [fb6f615d] 	 * rails-dom-testing (2.0.3)
+ DEBUG [fb6f615d] 	 * crass (1.0.4)
+ DEBUG [fb6f615d] 	 * loofah (2.2.3)
+ DEBUG [fb6f615d] 	 * rails-html-sanitizer (1.0.4)
+ DEBUG [fb6f615d] 	 * actionview (5.2.3)
+ DEBUG [fb6f615d] 	 * rack (2.0.7)
+ DEBUG [fb6f615d] 	 * rack-test (1.1.0)
+ DEBUG [fb6f615d] 	 * actionpack (5.2.3)
+ DEBUG [fb6f615d] 	 * nio4r (2.3.1)
+ DEBUG [fb6f615d] 	 * websocket-extensions (0.1.3)
+ DEBUG [fb6f615d] 	 * websocket-driver (0.7.0)
+ DEBUG [fb6f615d] 	 * actioncable (5.2.3)
+ DEBUG [fb6f615d] 	 * globalid (0.4.2)
+ DEBUG [fb6f615d] 	 * activejob (5.2.3)
+ DEBUG [fb6f615d] 	 * mini_mime (1.0.1)
+ DEBUG [fb6f615d] 	 * mail (2.7.1)
+ DEBUG [fb6f615d] 	 * actionmailer (5.2.3)
+ DEBUG [fb6f615d] 	 * activemodel (5.2.3)
+ DEBUG [fb6f615d] 	 * arel (9.0.0)
+ DEBUG [fb6f615d] 	 * activerecord (5.2.3)
+ DEBUG [fb6f615d] 	 * mimemagic (0.3.3)
+ DEBUG [fb6f615d] 	 * marcel (0.3.3)
+ DEBUG [fb6f615d] 	 * activestorage (5.2.3)
+ DEBUG [fb6f615d] 	 * public_suffix (3.1.0)
+ DEBUG [fb6f615d] 	 * addressable (2.6.0)
+ DEBUG [fb6f615d] 	 * net-ssh (5.2.0)
+ DEBUG [fb6f615d] 	 * net-scp (2.0.0)
+ DEBUG [fb6f615d] 	 * sshkit (1.18.2)
+ DEBUG [fb6f615d] 	 * airbrussh (1.3.1)
+ DEBUG [fb6f615d] 	 * bcrypt (3.1.12)
+ DEBUG [fb6f615d] 	 * msgpack (1.2.10)
+ DEBUG [fb6f615d] 	 * bootsnap (1.4.4)
+ DEBUG [fb6f615d] 	 * byebug (11.0.1)
+ DEBUG [fb6f615d] 	 * capistrano (3.11.0)
+ DEBUG [fb6f615d] 	 * capistrano-bundler (1.5.0)
+ DEBUG [fb6f615d] 	 * capistrano-passenger (0.2.0)
+ DEBUG [fb6f615d] 	 * capistrano-rails (1.4.0)
+ DEBUG [fb6f615d] 	 * capistrano-rbenv (2.1.4)
+ DEBUG [fb6f615d] 	 * mime-types-data (3.2019.0331)
+ DEBUG [fb6f615d] 	 * mime-types (3.2.2)
+ DEBUG [fb6f615d] 	 * carrierwave (1.3.1)
+ DEBUG [fb6f615d] 	 * colorize (0.8.1)
+ DEBUG [fb6f615d] 	 * highline (2.0.2)
+ DEBUG [fb6f615d] 	 * commander (4.4.7)
+ DEBUG [fb6f615d] 	 * daemons (1.3.1)
+ DEBUG [fb6f615d] 	 * delayed_job (4.1.5)
+ DEBUG [fb6f615d] 	 * delayed_job_active_record (4.1.3)
+ DEBUG [fb6f615d] 	 * orm_adapter (0.5.0)
+ DEBUG [fb6f615d] 	 * method_source (0.9.2)
+ DEBUG [fb6f615d] 	 * thor (0.20.3)
+ DEBUG [fb6f615d] 	 * railties (5.2.3)
+ DEBUG [fb6f615d] 	 * responders (2.4.1)
+ DEBUG [fb6f615d] 	 * warden (1.2.8)
+ DEBUG [fb6f615d] 	 * devise (4.6.2)
+ DEBUG [fb6f615d] 	 * sprockets (3.7.2)
+ DEBUG [fb6f615d] 	 * sprockets-rails (3.2.1)
+ DEBUG [fb6f615d] 	 * rails (5.2.3)
+ DEBUG [fb6f615d] 	 * devise_token_auth (1.1.0)
+ DEBUG [fb6f615d] 	 * unf_ext (0.0.7.6)
+ DEBUG [fb6f615d] 	 * unf (0.1.4)
+ DEBUG [fb6f615d] 	 * domain_name (0.5.20180417)
+ DEBUG [fb6f615d] 	 * faker (1.9.3)
+ DEBUG [fb6f615d] 	 * multipart-post (2.1.1)
+ DEBUG [fb6f615d] 	 * faraday (0.15.4)
+ DEBUG [fb6f615d] 	 * multi_xml (0.6.0)
+ DEBUG [fb6f615d] 	 * httparty (0.17.0)
+ DEBUG [fb6f615d] 	 * fcm (0.0.6)
+ DEBUG [fb6f615d] 	 * ffi (1.11.1)
+ DEBUG [fb6f615d] 	 * filterable (0.1.0)
+ DEBUG [fb6f615d] 	 * hashie (3.6.0)
+ DEBUG [fb6f615d] 	 * json (2.2.0)
+ DEBUG [fb6f615d] 	 * houston (2.4.0)
+ DEBUG [fb6f615d] 	 * http-cookie (1.0.3)
+ DEBUG [fb6f615d] 	 * jbuilder (2.9.1)
+ DEBUG [fb6f615d] 	 * kaminari-core (1.1.1)
+ DEBUG [fb6f615d] 	 * kaminari-actionview (1.1.1)
+ DEBUG [fb6f615d] 	 * kaminari-activerecord (1.1.1)
+ DEBUG [fb6f615d] 	 * kaminari (1.1.1)
+ DEBUG [fb6f615d] 	 * koala (3.0.0)
+ DEBUG [fb6f615d] 	 * rb-fsevent (0.10.3)
+ DEBUG [fb6f615d] 	 * rb-inotify (0.10.0)
+ DEBUG [fb6f615d] 	 * ruby_dep (1.5.0)
+ DEBUG [fb6f615d] 	 * listen (3.1.5)
+ DEBUG [fb6f615d] 	 * mini_magick (4.9.3)
+ DEBUG [fb6f615d] 	 * mysql2 (0.5.2)
+ DEBUG [fb6f615d] 	 * netrc (0.11.0)
+ DEBUG [fb6f615d] 	 * omniauth (1.9.0)
+ DEBUG [fb6f615d] 	 * paranoia (2.4.2)
+ DEBUG [fb6f615d] 	 * pdfkit (0.8.4.1)
+ DEBUG [fb6f615d] 	 * pg (1.1.4)
+ DEBUG [fb6f615d] 	 * puma (3.12.1)
+ DEBUG [fb6f615d] 	 * pundit (2.0.1)
+ DEBUG [fb6f615d] 	 * rack-cors (1.0.3)
+ DEBUG [fb6f615d] 	 * rest-client (2.0.2)
+ DEBUG [fb6f615d] 	 * rubyzip (1.2.2)
+ DEBUG [fb6f615d] 	 * roo (2.7.1)
+ DEBUG [fb6f615d] 	 * ruby-ole (1.2.12.2)
+ DEBUG [fb6f615d] 	 * spreadsheet (1.2.3)
+ DEBUG [fb6f615d] 	 * roo-xls (1.2.0)
+ DEBUG [fb6f615d] 	 * spring (2.0.2)
+ DEBUG [fb6f615d] 	 * spring-watcher-listen (2.0.1)
+ DEBUG [fb6f615d] 	 * wkhtmltopdf-binary (0.12.4)
+ DEBUG [fb6f615d] 	Install missing gems with `bundle install`
+ DEBUG [fb6f615d] Finished in 0.896 seconds with exit status 1 (failed).
+  INFO [e469fd72] Running $HOME/.rbenv/bin/rbenv exec bundle install --path /home/ubuntu/ame-backend/shared/bundle --jobs 4 --without development test --deployment --quiet as ubuntu@52.205.254.190
+ DEBUG [e469fd72] Command: cd /home/ubuntu/ame-backend/releases/20190711161354 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.4.2" ; $HOME/.rbenv/bin/rbenv exec bundle install --path /home/ubuntu/ame-backend/shared/bundle --jobs 4 --without development test --deployment --quiet )
+  INFO [df615d73] Finished in 80.015 seconds with exit status 0 (successful).
+ DEBUG [f51161e0] Running if test ! -d /home/ubuntu/ame-backend/releases/20190711161354; then echo "Directory does not exist '/home/ubuntu/ame-backend/releases/20190711161354'" 1>&2; false; fi as ubuntu@52.205.254.190
+ DEBUG [f51161e0] Command: if test ! -d /home/ubuntu/ame-backend/releases/20190711161354; then echo "Directory does not exist '/home/ubuntu/ame-backend/releases/20190711161354'" 1>&2; false; fi
+ DEBUG [5d08b252] Finished in 0.479 seconds with exit status 0 (successful).
+  INFO [308a2dc0] Running $HOME/.rbenv/bin/rbenv exec bundle exec rake assets:precompile as ubuntu@52.205.254.190
+ DEBUG [308a2dc0] Command: cd /home/ubuntu/ame-backend/releases/20190711161354 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.4.2" RAILS_ENV="production" RAILS_GROUPS="" ; $HOME/.rbenv/bin/rbenv exec bundle exec rake assets:precompile )
+ DEBUG [5ab9acf0] 	rake aborted!
+ DEBUG [5ab9acf0] 	Don't know how to build task 'assets:precompile' (See the list of available tasks with `rake --tasks`)
+ DEBUG [5ab9acf0] 	/home/ubuntu/ame-backend/shared/bundle/ruby/2.4.0/gems/rake-12.3.2/exe/rake:27:in `<top (required)>'
+/home/ubuntu/.rbenv/versions/2.4.2/bin/bundle:23:in `load'
+/home/ubuntu/.rbenv/versions/2.4.2/bin/bundle:23:in `<main>'
+ DEBUG [5ab9acf0] 	(See full trace by running task with --trace)
