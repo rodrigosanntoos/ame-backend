@@ -14768,3 +14768,297 @@ Processing by Api::V1::SalesController#index as JSON
 Completed 200 OK in 14ms (Views: 8.4ms | ActiveRecord: 1.9ms)
 
 
+  [1m[35m (3.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (3.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (120.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS "festa-backend_development"[0m
+  ↳ bin/rails:9
+  [1m[35m (117.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "festa-backend_test"[0m
+  ↳ bin/rails:9
+  [1m[35m (471.6ms)[0m  [1m[35mCREATE DATABASE "festa-backend_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (371.4ms)[0m  [1m[35mCREATE DATABASE "festa-backend_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (5.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3550744802028369960)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateUsers (20190608154248)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (7.6ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "name" character varying, "address" character varying, "number" integer, "telephone" character varying, "cell_phone" character varying, "complement" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190608154248_create_users.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (1.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190608154248"]]
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateProducts (20190620160731)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (6.1ms)[0m  [1m[35mCREATE TABLE "products" ("id" bigserial primary key, "name" character varying, "amount" integer, "value" float, "value_smash" float, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190620160731_create_products.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190620160731"]]
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to DeviseTokenAuthCreateAdmins (20190628122906)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE TABLE "admins" ("id" bigserial primary key, "provider" character varying DEFAULT 'email' NOT NULL, "uid" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "allow_password_change" boolean DEFAULT FALSE, "remember_created_at" timestamp, "confirmation_token" character varying, "confirmed_at" timestamp, "confirmation_sent_at" timestamp, "unconfirmed_email" character varying, "name" character varying, "nickname" character varying, "image" character varying, "email" character varying, "tokens" json, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190628122906_devise_token_auth_create_admins.rb:4
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_admins_on_email" ON "admins"  ("email")[0m
+  ↳ db/migrate/20190628122906_devise_token_auth_create_admins.rb:43
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_admins_on_uid_and_provider" ON "admins"  ("uid", "provider")[0m
+  ↳ db/migrate/20190628122906_devise_token_auth_create_admins.rb:44
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_admins_on_reset_password_token" ON "admins"  ("reset_password_token")[0m
+  ↳ db/migrate/20190628122906_devise_token_auth_create_admins.rb:45
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_admins_on_confirmation_token" ON "admins"  ("confirmation_token")[0m
+  ↳ db/migrate/20190628122906_devise_token_auth_create_admins.rb:46
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190628122906"]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateSales (20190701220501)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (3.8ms)[0m  [1m[35mCREATE TABLE "sales" ("id" bigserial primary key, "user_id" bigint, "address" character varying, "number" integer, "apt" integer, "complement" character varying, "reference" character varying, "phone" character varying, "cell_phone" character varying, "birthday_name" character varying, "year" integer, "number_children" integer, "age_range" character varying, "amount_adult" integer, "hour" character varying, "date_event" date, "day_week" character varying, "date_final" date, "freight" float, "days_collect" integer, "value_final" float, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_8e94f16ccc"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  ↳ db/migrate/20190701220501_create_sales.rb:3
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE  INDEX  "index_sales_on_user_id" ON "sales"  ("user_id")[0m
+  ↳ db/migrate/20190701220501_create_sales.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190701220501"]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateSaleProducts (20190701224339)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE TABLE "sale_products" ("id" bigserial primary key, "product_id" bigint, "sale_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_35f440f64a"
+FOREIGN KEY ("product_id")
+  REFERENCES "products" ("id")
+, CONSTRAINT "fk_rails_d455fb70e2"
+FOREIGN KEY ("sale_id")
+  REFERENCES "sales" ("id")
+)[0m
+  ↳ db/migrate/20190701224339_create_sale_products.rb:3
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE  INDEX  "index_sale_products_on_product_id" ON "sale_products"  ("product_id")[0m
+  ↳ db/migrate/20190701224339_create_sale_products.rb:3
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE  INDEX  "index_sale_products_on_sale_id" ON "sale_products"  ("sale_id")[0m
+  ↳ db/migrate/20190701224339_create_sale_products.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190701224339"]]
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to AddDetailsToSaleProduct (20190702002506)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "sale_products" ADD "amount" integer[0m
+  ↳ db/migrate/20190702002506_add_details_to_sale_product.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190702002506"]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to AddTrackableColumnsToAdmin (20190808154248)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (7.7ms)[0m  [1m[35mALTER TABLE "admins" ADD "sign_in_count" integer DEFAULT 0[0m
+  ↳ db/migrate/20190808154248_add_trackable_columns_to_admin.rb:4
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "admins" ADD "current_sign_in_at" timestamp[0m
+  ↳ db/migrate/20190808154248_add_trackable_columns_to_admin.rb:5
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "admins" ADD "last_sign_in_at" timestamp[0m
+  ↳ db/migrate/20190808154248_add_trackable_columns_to_admin.rb:6
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "admins" ADD "current_sign_in_ip" character varying[0m
+  ↳ db/migrate/20190808154248_add_trackable_columns_to_admin.rb:7
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "admins" ADD "last_sign_in_ip" character varying[0m
+  ↳ db/migrate/20190808154248_add_trackable_columns_to_admin.rb:8
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190808154248"]]
+  ↳ bin/rails:9
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-07-22 20:10:28.834369"], ["updated_at", "2019-07-22 20:10:28.834369"]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(3550744802028369960)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAdmin Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "admins" WHERE "admins"."email" = $1 AND "admins"."provider" = $2 LIMIT $3[0m  [["email", "eduardo@gmail.com"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mAdmin Create (2.6ms)[0m  [1m[32mINSERT INTO "admins" ("uid", "encrypted_password", "email", "tokens", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["uid", "eduardo@gmail.com"], ["encrypted_password", "$2a$11$N5CLSciibx0ucM1Z4ghHoeJQa6dOqW4K//RQyp/kAsIi85DgCASOW"], ["email", "eduardo@gmail.com"], ["tokens", "{}"], ["created_at", "2019-07-22 20:14:20.034298"], ["updated_at", "2019-07-22 20:14:20.034298"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Started POST "/api/v1/auth/sign_in" for ::1 at 2019-07-22 17:15:39 -0300
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/mateus/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Api::V1::Overrides::SessionsController#create as JSON
+  Parameters: {"email"=>"eduardo@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"eduardo@gmail.com", "password"=>"[FILTERED]"}}
+Unpermitted parameters: :format, :session
+Unpermitted parameters: :format, :session
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."email" = $1 AND "admins"."provider" = $2 LIMIT $3[0m  [["email", "eduardo@gmail.com"], ["provider", "email"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/overrides/sessions_controller.rb:5
+Unpermitted parameters: :format, :session
+Unpermitted parameters: :format, :session
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/overrides/sessions_controller.rb:5
+  [1m[36mAdmin Update (0.4ms)[0m  [1m[33mUPDATE "admins" SET "tokens" = $1, "updated_at" = $2 WHERE "admins"."id" = $3[0m  [["tokens", "{\"6hggpQjOckmnKNy1_M694g\":{\"token\":\"$2a$10$/JVI2KBHbMeqzxh2a.0zU.VO4A3fviDwmRcB/KMTEGKEgFPp8fxCm\",\"expiry\":1565036140}}"], ["updated_at", "2019-07-22 20:15:40.327732"], ["id", 1]]
+  ↳ app/controllers/api/v1/overrides/sessions_controller.rb:5
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/overrides/sessions_controller.rb:5
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/overrides/sessions_controller.rb:5
+  [1m[36mAdmin Update (0.3ms)[0m  [1m[33mUPDATE "admins" SET "updated_at" = $1, "sign_in_count" = $2, "current_sign_in_at" = $3, "last_sign_in_at" = $4, "current_sign_in_ip" = $5, "last_sign_in_ip" = $6 WHERE "admins"."id" = $7[0m  [["updated_at", "2019-07-22 20:15:40.331950"], ["sign_in_count", 1], ["current_sign_in_at", "2019-07-22 20:15:40.331499"], ["last_sign_in_at", "2019-07-22 20:15:40.331499"], ["current_sign_in_ip", "::1"], ["last_sign_in_ip", "::1"], ["id", 1]]
+  ↳ app/controllers/api/v1/overrides/sessions_controller.rb:5
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/overrides/sessions_controller.rb:5
+No template found for Api::V1::Overrides::SessionsController#create, rendering head :no_content
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/mateus/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 204 No Content in 354ms (ActiveRecord: 10.5ms)
+
+
+Started GET "/api/v1/products" for ::1 at 2019-07-22 17:15:40 -0300
+Processing by Api::V1::ProductsController#index as JSON
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."uid" = $1 LIMIT $2[0m  [["uid", "eduardo@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/mateus/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering api/v1/products/index.json.jbuilder
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  ↳ app/views/api/v1/products/index.json.jbuilder:1
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/api/v1/products/index.json.jbuilder:2
+  Rendered api/v1/products/index.json.jbuilder (8.4ms)
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/mateus/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 200 OK in 110ms (Views: 9.3ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/api/v1/sales?page=1&field=" for ::1 at 2019-07-22 17:15:46 -0300
+Processing by Api::V1::SalesController#index as JSON
+  Parameters: {"page"=>"1", "field"=>""}
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."uid" = $1 LIMIT $2[0m  [["uid", "eduardo@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/mateus/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering api/v1/sales/index.json.jbuilder
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "sales" INNER JOIN "users" ON "users"."id" = "sales"."user_id" WHERE (users.name ilike '%%')[0m
+  ↳ app/views/api/v1/sales/index.json.jbuilder:1
+  [1m[36mSale Load (0.6ms)[0m  [1m[34mSELECT  "sales".* FROM "sales" INNER JOIN "users" ON "users"."id" = "sales"."user_id" WHERE (users.name ilike '%%') LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/api/v1/sales/index.json.jbuilder:2
+  Rendered api/v1/sales/index.json.jbuilder (19.7ms)
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/mateus/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 200 OK in 31ms (Views: 13.1ms | ActiveRecord: 8.5ms)
+
+
+Started GET "/api/v1/products" for ::1 at 2019-07-22 17:15:47 -0300
+Processing by Api::V1::ProductsController#index as JSON
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."uid" = $1 LIMIT $2[0m  [["uid", "eduardo@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/mateus/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering api/v1/products/index.json.jbuilder
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  ↳ app/views/api/v1/products/index.json.jbuilder:1
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/api/v1/products/index.json.jbuilder:2
+  Rendered api/v1/products/index.json.jbuilder (1.9ms)
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/mateus/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 200 OK in 6ms (Views: 2.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/v1/sales?page=1&field=" for ::1 at 2019-07-22 17:15:48 -0300
+Processing by Api::V1::SalesController#index as JSON
+  Parameters: {"page"=>"1", "field"=>""}
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."uid" = $1 LIMIT $2[0m  [["uid", "eduardo@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/mateus/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering api/v1/sales/index.json.jbuilder
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "sales" INNER JOIN "users" ON "users"."id" = "sales"."user_id" WHERE (users.name ilike '%%')[0m
+  ↳ app/views/api/v1/sales/index.json.jbuilder:1
+  [1m[36mSale Load (0.7ms)[0m  [1m[34mSELECT  "sales".* FROM "sales" INNER JOIN "users" ON "users"."id" = "sales"."user_id" WHERE (users.name ilike '%%') LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/api/v1/sales/index.json.jbuilder:2
+  Rendered api/v1/sales/index.json.jbuilder (3.3ms)
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/mateus/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 200 OK in 7ms (Views: 2.8ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/api/v1/products" for ::1 at 2019-07-22 17:15:49 -0300
+Processing by Api::V1::ProductsController#index as JSON
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."uid" = $1 LIMIT $2[0m  [["uid", "eduardo@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/mateus/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering api/v1/products/index.json.jbuilder
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  ↳ app/views/api/v1/products/index.json.jbuilder:1
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/api/v1/products/index.json.jbuilder:2
+  Rendered api/v1/products/index.json.jbuilder (2.0ms)
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/mateus/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 200 OK in 6ms (Views: 2.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/api/v1/sales?page=1&field=" for ::1 at 2019-07-22 17:15:49 -0300
+Processing by Api::V1::SalesController#index as JSON
+  Parameters: {"page"=>"1", "field"=>""}
+  [1m[36mAdmin Load (0.6ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."uid" = $1 LIMIT $2[0m  [["uid", "eduardo@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/mateus/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering api/v1/sales/index.json.jbuilder
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "sales" INNER JOIN "users" ON "users"."id" = "sales"."user_id" WHERE (users.name ilike '%%')[0m
+  ↳ app/views/api/v1/sales/index.json.jbuilder:1
+  [1m[36mSale Load (0.6ms)[0m  [1m[34mSELECT  "sales".* FROM "sales" INNER JOIN "users" ON "users"."id" = "sales"."user_id" WHERE (users.name ilike '%%') LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/api/v1/sales/index.json.jbuilder:2
+  Rendered api/v1/sales/index.json.jbuilder (3.1ms)
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/mateus/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 200 OK in 9ms (Views: 2.9ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/api/v1/products" for ::1 at 2019-07-22 17:15:50 -0300
+Processing by Api::V1::ProductsController#index as JSON
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."uid" = $1 LIMIT $2[0m  [["uid", "eduardo@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/mateus/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering api/v1/products/index.json.jbuilder
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  ↳ app/views/api/v1/products/index.json.jbuilder:1
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/api/v1/products/index.json.jbuilder:2
+  Rendered api/v1/products/index.json.jbuilder (1.9ms)
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/mateus/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 200 OK in 6ms (Views: 2.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/v1/sales?page=1&field=" for ::1 at 2019-07-22 17:15:51 -0300
+Processing by Api::V1::SalesController#index as JSON
+  Parameters: {"page"=>"1", "field"=>""}
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."uid" = $1 LIMIT $2[0m  [["uid", "eduardo@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/mateus/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering api/v1/sales/index.json.jbuilder
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "sales" INNER JOIN "users" ON "users"."id" = "sales"."user_id" WHERE (users.name ilike '%%')[0m
+  ↳ app/views/api/v1/sales/index.json.jbuilder:1
+  [1m[36mSale Load (0.5ms)[0m  [1m[34mSELECT  "sales".* FROM "sales" INNER JOIN "users" ON "users"."id" = "sales"."user_id" WHERE (users.name ilike '%%') LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/api/v1/sales/index.json.jbuilder:2
+  Rendered api/v1/sales/index.json.jbuilder (2.6ms)
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/mateus/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 200 OK in 6ms (Views: 2.5ms | ActiveRecord: 1.3ms)
+
+

@@ -14,7 +14,7 @@ class Api::V1::SalesController < ApplicationController
     def index
         params[:page] ||= 1
         if params[:field]
-            @sales = Sale.joins(:user).where("users.name ilike '%#{params[:field]}%'").page(params[:page]).per(10)
+            @sales = Sale.joins(:user).where("users.name like '%#{params[:field]}%'").page(params[:page]).per(10)
         else
             @sales = Sale.joins(:user).page(params[:page]).per(10)
         end
